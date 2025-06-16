@@ -22,7 +22,7 @@ repository               : "AdityaJaiswal17/AdityaJaiswal17.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile_pic.JPG"
+  avatar           : "/self_upload/profile_pic.JPG" 
   name             : "Aditya Jaiswal"
   pronouns         : # example: "she/her"  
   bio              : "Mechanical engineer -- Computational Mathematics and Fluid Dynamics, High performace Computing"
