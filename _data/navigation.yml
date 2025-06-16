@@ -27,8 +27,8 @@ main:
   # - title: "Blog Posts"
   #   url: /year-archive/
     
-  - title: "Undergraduate Thesis"
-    url: /undergraduate_thesis/
+  # - title: "Undergraduate Thesis"
+  #   url: /undergraduate_thesis/
     
   # - title: "CV"
   #   url: /cv-json/
