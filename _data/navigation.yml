@@ -12,8 +12,11 @@ main:
   - title: "CV"
     url: /cv/
 
-  - title: "Publications"
-    url: /publications/
+  - title: "Projects"
+    url: /projects/
+
+  - title: "Undergraduate Thesis"
+    url: /undergraduate_thesis/
 
   # - title: "Talks"
   #   url: /talks/    

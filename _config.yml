@@ -22,7 +22,7 @@ repository               : "AdityaJaiswal17/AdityaJaiswal17.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile_pic.JPG"
   name             : "Aditya Jaiswal"
   pronouns         : # example: "she/her"  
   bio              : "Mechanical engineer -- Computational Mathematics and Fluid Dynamics, High performace Computing"
@@ -51,7 +51,7 @@ author:
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  # bluesky          : "bsky.app" # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
