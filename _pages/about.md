@@ -7,11 +7,16 @@ redirect_from:
   - /about.html
 ---
 
-I am Aditya Jaiswal, a graduate in Mechanical Engineering from Birla Institute of Technology and Science (BITS) Pilani. My academic interests lie at the intersection of applied mathematics, numerical methods, and high-performance computing, with a particular focus on computational fluid dynamics and scientific simulation.
+I am Aditya Jaiswal, a graduate in Mechanical Engineering from the prestigious [Birla Institute of Technology and Science (BITS) Pilani, Pilani campus](https://www.bits-pilani.ac.in/pilani/mechanical-engineering/). My academic interests lie at the intersection of applied mathematics, numerical methods, and high-performance computing, with a particular focus on computational fluid dynamics and scientific simulation.
 
-Over the course of my undergraduate studies, I have pursued research experiences that integrate theoretical modeling with practical computational frameworks. During my undergraduate thesis at the Indian Institute of Science (IISc), I worked on developing algorithms for mesh recombination from triangular meshes into quadrilateral and mixed-element meshes, tailored for compressible flow simulations and boundary layer resolution. This work involved using mesh generation and adaptation tools such as NETGEN and Gmsh, and included designing a format converter between `.su2` and `.vol` file types to facilitate algorithm validation.
+About my interests & Academic/Industrial experiences 
+======
 
-Previously, as a research intern at the Indian Institute of Technology Bombay (IIT Bombay), I formulated an improved surface tension forcing scheme for multiphase flow simulations within a diffuse interface framework. This work, based on the Lattice Boltzmann Method (LBM) and perturbation analysis of the Allen-Cahn equation, was presented at COMPFLU 2023. Additionally, during my internship at the Indian Space Research Organization (ISRO), I contributed to the mechanical and computational design of a novel roll-out solar array mechanism, including dynamic modeling and motor torque analysis.
+Over the course of my undergraduate studies, I have pursued research experiences that integrate theoretical modeling with practical computational frameworks. During my undergraduate thesis at the [**Indian Institute of Science (IISc)**](https://aero.iisc.ac.in/), I worked on developing algorithms for mesh recombination from triangular meshes into quadrilateral and mixed-element meshes, tailored for compressible flow simulations and boundary layer resolution under [Prof. Aravind Balan](https://aero.iisc.ac.in/people/aravind-balan/). This work involved using mesh generation and adaptation tools such as NETGEN and Gmsh, and included designing a format converter between `.su2` and `.vol` file types to facilitate algorithm validation. Additionally, Python was used as the preferred language for the development of the Algorithm.
+
+Previously, as a research intern at the [**Indian Institute of Technology Bombay (IIT Bombay)**](https://www.che.iitb.ac.in/) under [Prof. Amol Subhedar](https://www.che.iitb.ac.in/faculty/amol-subhedar), I formulated an improved surface tension forcing scheme for multiphase flow simulations within a diffuse interface framework. This work, based on the Lattice Boltzmann Method (LBM) and perturbation analysis of the Allen-Cahn equation, was presented at COMPFLU 2023. 
+
+Additionally, during my internship at the [**Indian Space Research Organization (ISRO)**](https://www.ursc.gov.in/), I contributed to the mechanical and computational design of a novel roll-out solar array (ROSA) mechanism, including dynamic modeling and motor torque analysis.
 
 I am currently developing a parallel LBM solver in C++ for low Mach number airfoil simulations, with OpenMP-based parallelization and planned MPI extension. Through these projects, I have developed strong proficiency in computational physics, algorithm development, and scientific programming.
 
