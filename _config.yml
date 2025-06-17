@@ -9,13 +9,14 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Aditya Jaiswal"
+title                    : "Aditya's Homepage"
 title_separator          : "-"
 name                     : &name "Aditya Jaiswal" # This is the name that will appear in the title tag and as the site name
 description              : &description "Mechanical engineer -- Computational Mathematics and Fluid Dynamics, High performace Computing"
 url                      : https://adityajaiswal17.github.io/ # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "AdityaJaiswal17/AdityaJaiswal17.github.io"
+logo                     : "/images/site-logo.png" # the path to your logo, e.g. "/images/logo.png"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
