@@ -10,7 +10,7 @@ redirect_from:
 I am Aditya Jaiswal, a graduate in Mechanical Engineering from the prestigious [Birla Institute of Technology and Science (BITS) Pilani, Pilani campus](https://www.bits-pilani.ac.in/pilani/mechanical-engineering/). My academic interests lie at the intersection of applied mathematics, numerical methods, and high-performance computing, with a particular focus on computational fluid dynamics and scientific simulation.
 
 About my interests & Academic/Industrial experiences 
-======
+------
 
 Over the course of my undergraduate studies, I have pursued research experiences that integrate theoretical modeling with practical computational frameworks. During my undergraduate thesis at the [**Indian Institute of Science (IISc)**](https://aero.iisc.ac.in/), I worked on developing algorithms for mesh recombination from triangular meshes into quadrilateral and mixed-element meshes, tailored for compressible flow simulations and boundary layer resolution under [Prof. Aravind Balan](https://aero.iisc.ac.in/people/aravind-balan/). This work involved using mesh generation and adaptation tools such as NETGEN and Gmsh, and included designing a format converter between `.su2` and `.vol` file types to facilitate algorithm validation. Additionally, Python was used as the preferred language for the development of the Algorithm.
 
@@ -20,7 +20,7 @@ Additionally, during my internship at the [**Indian Space Research Organization 
 
 I am currently developing a parallel LBM solver in C++ for low Mach number airfoil simulations, with OpenMP-based parallelization and planned MPI extension. Through these projects, I have developed strong proficiency in computational physics, algorithm development, and scientific programming.
 
-Getting started
+<!-- Getting started
 ======
 1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
 1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
@@ -51,4 +51,4 @@ Example: editing a markdown file for a talk
 
 For more info
 ------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful. -->
