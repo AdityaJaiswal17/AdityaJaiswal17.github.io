@@ -18,6 +18,9 @@ main:
   - title: "Undergraduate Thesis"
     url: /undergraduate_thesis/
 
+  - title: "Publications"
+    url: /publications/
+
   # - title: "Talks"
   #   url: /talks/    
 
