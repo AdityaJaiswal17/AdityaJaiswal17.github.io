@@ -1,14 +1,16 @@
 ---
-# layout: default
-title: "Finite Difference Projects"
+layout: default
+title: "Finite Difference Method Projects"
 permalink: /projects/fdm/
 ---
 
-## Finite Difference Projects
+## Finite Difference Method Projects
 
 {% assign fdm_projects = site.projects | where: "method", "fdm" %}
-<ul>
-  {% for project in fdm_projects %}
-    <li><a href="{{ project.url }}">{{ project.title }}</a></li>
-  {% endfor %}
-</ul>
+{% for project in fdm_projects %}
+<div class="project-entry">
+  <h3><a href="{{ project.url }}">{{ project.title }}</a></h3>
+  <p>{{ project.excerpt }}</p>
+</div>
+<hr>
+{% endfor %}

@@ -1,14 +1,16 @@
 ---
-# layout: default
-title: "Laticce Boltzmann Projects"
+layout: default
+title: "Lattice Boltzmann Method Projects"
 permalink: /projects/lbm/
 ---
 
-## Laticce Boltzmann Projects
+## Finite Difference Method Projects
 
 {% assign lbm_projects = site.projects | where: "method", "lbm" %}
-<ul>
-  {% for project in lbm_projects %}
-    <li><a href="{{ project.url }}">{{ project.title }}</a></li>
-  {% endfor %}
-</ul>
+{% for project in lbm_projects %}
+<div class="project-entry">
+  <h3><a href="{{ project.url }}">{{ project.title }}</a></h3>
+  <p>{{ project.excerpt }}</p>
+</div>
+<hr>
+{% endfor %}

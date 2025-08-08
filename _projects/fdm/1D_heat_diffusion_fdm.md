@@ -1,12 +1,8 @@
 ---
+title: "1D Heat Equation"
 layout: project
-title: "Heat Equation Solver"
 method: fdm
 permalink: /projects/fdm/heat-equation/
+excerpt: "A simple implementation of the 1D heat equation using forward Euler method."
 ---
-
-## Heat Equation Solver
-
-This project solves the 1D heat equation using finite difference methods...
-
-<!-- Include more markdown content -->
+test123
