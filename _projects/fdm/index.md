@@ -1,5 +1,5 @@
 ---
-layout: default
+# layout: default
 title: "Finite Difference Projects"
 permalink: /projects/fdm/
 ---

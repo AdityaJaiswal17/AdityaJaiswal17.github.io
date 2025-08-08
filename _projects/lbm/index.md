@@ -1,5 +1,5 @@
 ---
-layout: default
+# layout: default
 title: "Laticce Boltzmann Projects"
 permalink: /projects/lbm/
 ---
