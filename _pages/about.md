@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am Aditya Jaiswal, a graduate in Mechanical Engineering from the prestigious [Birla Institute of Technology and Science (BITS) Pilani, Pilani campus](https://www.bits-pilani.ac.in/pilani/mechanical-engineering/). My academic interests lie at the intersection of applied mathematics, numerical methods, and high-performance computing, with a particular focus on computational fluid dynamics and scientific simulation.
+I am Aditya Jaiswal, a graduate in Mechanical Engineering from the prestigious [**Birla Institute of Technology and Science (BITS) Pilani, Pilani campus**](https://www.bits-pilani.ac.in/pilani/mechanical-engineering/). My academic interests lie at the intersection of applied mathematics, numerical methods, and high-performance computing, with a particular focus on computational fluid dynamics and scientific simulation.
 
 About my interests & Academic/Industrial experiences 
 ------
