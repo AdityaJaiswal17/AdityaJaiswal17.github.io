@@ -4,7 +4,7 @@ title: "Lattice Boltzmann Method Projects"
 permalink: /projects/lbm/
 ---
 
-## Finite Difference Method Projects
+## Lattice Boltzmann Method Projects
 
 {% assign lbm_projects = site.projects | where: "method", "lbm" %}
 {% for project in lbm_projects %}
