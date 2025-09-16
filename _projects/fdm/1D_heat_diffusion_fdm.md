@@ -29,12 +29,12 @@ g++ 1D_Heat_Diff.cpp -fopenmp -o heat_diff
 
 ## Results 
 
-- <figure>
+<figure>
 <img src="/images/self_upload/fdm/1D_heat_diffusion_1.png" alt="The temperature profile when the boundary conditions at the start and end node are 100.0 and 1000.0 respectively">
 <figcaption>(fig. 1) The temperature profile when the boundary conditions at the start and end node are 100.0 and 1000.0 respectively.</figcaption>
 </figure>
 
-- <figure>
+<figure>
   <img src="/images/self_upload/fdm/1D_heat_diffusion_2.png" alt="The temperature profile when the boundary conditions at the start and end node are 100.0 and 100.0 respectively">
   <figcaption>(fig. 2) The temperature profile when the boundary conditions at the start and end node are 100.0 and 100.0 respectively.</figcaption>
 </figure>
