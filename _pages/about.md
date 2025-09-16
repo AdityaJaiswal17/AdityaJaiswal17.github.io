@@ -20,6 +20,8 @@ Additionally, during my internship at the [**Indian Space Research Organization 
 
 I am currently developing a parallel LBM solver in C++ for low Mach number airfoil simulations, with OpenMP-based parallelization and planned MPI extension. Through these projects, I have developed strong proficiency in computational physics, algorithm development, and scientific programming.
 
+![Flow past a cylinder](/images/self_upload/flowPastCylinder.gif)
+
 <!-- Getting started
 ======
 1. Register a GitHub account if you don't have one and confirm your e-mail (required!)

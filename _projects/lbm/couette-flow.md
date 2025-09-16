@@ -1,6 +1,6 @@
 ---
 title: "Couette flow LBM"
-layout: project
+layout: default
 method: lbm
 permalink: /projects/fdm/couette-flow-lbm/
 excerpt: "Couette flow implementation using Lattice boltzmann method with BGK."

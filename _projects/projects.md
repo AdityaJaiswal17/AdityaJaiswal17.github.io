@@ -10,13 +10,17 @@ collections: projects
 
 Welcome to my collection of computational methods and numerical analysis projects.
 
+All the codes are written in C++ along with openMP implementation in some of them (has been mentioned wherever needed). All the data was visualized using [**gnuplot**](http://www.gnuplot.info/) after the results, users can modify and use various ways like [**matplotlib**](https://matplotlib.org/) as well for the visualization.
+
 Numerical Methods
 ======
 
 * [**Finite Difference Methods**](/projects/fdm/)
+======
 Explore implementations and applications of finite difference schemes for solving partial differential equations.
 
 * [**Lattice Boltzmann Method**](/projects/lbm/)
+======
 Dive into the lattice Boltzmann approach for fluid dynamics simulations and mesoscopic modeling.
 
 ---
