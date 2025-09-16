@@ -2,11 +2,12 @@
 layout: archive
 title: Projects
 permalink: /projects/
+author_profile: true
 collections: projects
 ---
 
-Projects
-======
+{% include base_path %}
+
 Welcome to my collection of computational methods and numerical analysis projects.
 
 Numerical Methods
