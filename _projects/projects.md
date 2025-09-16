@@ -5,6 +5,8 @@ permalink: /projects/
 collections: projects
 ---
 
+<div style="padding-left: 2rem; padding-right: 2rem; max-width: none;">
+
 # Projects
 
 Welcome to my collection of computational methods and numerical analysis projects.
@@ -20,3 +22,5 @@ Dive into the lattice Boltzmann approach for fluid dynamics simulations and meso
 ---
 
 *Last updated: {{ site.time | date: "%B %Y" }}*
+
+</div>
