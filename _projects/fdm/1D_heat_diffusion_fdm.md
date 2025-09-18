@@ -9,7 +9,8 @@ excerpt: "A simple implementation of the 1D heat equation using forward Euler me
 
 # 1D Steady-State Heat Diffusion Solver (C++ with OpenMP)
 
-This project implements a **finite difference method (FDM)** solver for the **1D steady-state heat diffusion equation**. The code an be found [**here**](https://github.com/AdityaJaiswal17/Finite_Difference_Methods/blob/main/1D_HeatDiffusion_FDM%20/1D_Heat_Diff.cpp).
+This project implements a **finite difference method (FDM)** solver for the **1D steady-state heat diffusion equation**. The code can be found [**here in the github link**](https://github.com/AdityaJaiswal17/Finite_Difference_Methods/blob/main/1D_HeatDiffusion_FDM%20/1D_Heat_Diff.cpp).
+
 The code is written in **C++** and includes both a **serial implementation** and a **parallel implementation** using **OpenMP**, allowing for performance comparison between the two approaches.  
 
 After execution, the solver generates an `output.dat` file with the following structure:  
