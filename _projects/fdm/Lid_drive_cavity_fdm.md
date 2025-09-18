@@ -53,7 +53,7 @@ The above expression relates how advection and diffusion relate to peclet number
 
 <div style="text-align: center; margin: 15px 0;">
   <figure style="display: inline-block; margin: 0;">
-    <img src="/images/self_upload/fdm/peclet_num.jpg" alt="Central differencing scheme vs Upwind scheme for Pe > 2" style="width: 50%; height: auto; border-radius: 8px;">
+    <img src="/images/self_upload/fdm/peclet_num.jpg" alt="Central differencing scheme vs Upwind scheme for Pe > 2" style="width: 70%; height: auto; border-radius: 8px;">
     <figcaption style="font-size: 0.9em; margin-top: 5px;">
       Central differencing scheme vs Upwind scheme for Pe &gt; 2.
     </figcaption>
