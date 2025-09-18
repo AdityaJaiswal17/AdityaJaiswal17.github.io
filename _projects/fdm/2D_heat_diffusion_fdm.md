@@ -67,11 +67,10 @@ This iterative relation is applied until the solution converges (\\(\text{error}
 
 The gradients are computed as:
 
-\\[
-\frac{\partial T}{\partial x}\bigg|_{i,j} \approx \frac{T_{i+1,j} - T_{i-1,j}}{2 \Delta x}, 
-\quad
+$$
+\frac{\partial T}{\partial x}\bigg|_{i,j} \approx \frac{T_{i+1,j} - T_{i-1,j}}{2 \Delta x}, \quad
 \frac{\partial T}{\partial y}\bigg|_{i,j} \approx \frac{T_{i,j+1} - T_{i,j-1}}{2 \Delta y}
-\\]
+$$
 
 ---
 
