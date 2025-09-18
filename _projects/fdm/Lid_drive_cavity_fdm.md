@@ -9,7 +9,7 @@ excerpt: "Lid driven cavity implementation using stream vorticity formulation."
 
 # Lid-Driven Cavity Solver (C++ with OpenMP)
 
-This project implements a **finite difference method (FDM)** solver for the **2D incompressible Navier–Stokes equations** in a **lid-driven cavity flow** configuration. The implementation follows the **streamfunction–vorticity formulation** of the governing equations, inspired by [IIST, 2010](https://old.iist.ac.in/sites/default/files/people/psi-omega.pdf).  
+This project implements a **finite difference method (FDM)** solver for the **2D incompressible Navier–Stokes equations** in a **lid-driven cavity flow** configuration. The implementation follows the **streamfunction–vorticity formulation** of the governing equations, mentioned in [IIST, 2010](https://old.iist.ac.in/sites/default/files/people/psi-omega.pdf). The above mentioned PDF also talks about discretization of the equation as well as the schemes used.
 
 The code can be found [**here on GitHub**](https://github.com/AdityaJaiswal17/Finite_Difference_Methods/tree/main/Lid_Driven_Cavity).  
 
@@ -47,6 +47,16 @@ Boundary conditions are applied at the cavity walls:
 - **Top wall (lid):** constant velocity in the \\(x\\)-direction.  
 - **Other walls:** no-slip condition.  
 
+Also, during discretization, instead of using Central Differencing scheme we use Upwind scheme. The reason for this choice is that the Central differencing scheme does not account or capture the convective terms accurately (does not represent the directional influence of a disturbance). Recalling a simple lecture from Computational fluid dynamics, **Peclet number** is the ratio of advection to the diffusion. 
+\\[Pe = \frac{U L}{\Gamma}\\]
+The above expression relates how advection and diffusion relate to peclet number. Now, if, Pe > 2 then Upwind scheme is used as Central differencing scheme would be unstable. The figure below draws out the comparison of the same.
+
+<figure>
+  <img src="/images/self_upload/fdm/peclet_num.jpg" alt="Central differencing scheme vs Upwind scheme for Pe > 2">
+  <figcaption>Central differencing scheme vs Upwind scheme for Pe > 2.</figcaption>
+</figure>
+
+So, in the code we set an **If statement** and check for the values of Peclet number at each node calculation and set the coefficients accordingly.
 ---
 
 ## Output Structure  
@@ -61,19 +71,19 @@ Each row corresponds to a grid point in the domain, with the following structure
 
 | Column | Description |  
 |--------|-------------|  
-| 1 | Node index in the \(x\)-direction (\(i\)) |  
-| 2 | Node index in the \(y\)-direction (\(j\)) |  
-| 3 | Streamfunction (\(\psi\)) |  
-| 4 | Vorticity (\(\omega\)) |  
-| 5 | \(x\)-velocity component (\(u\)) |  
-| 6 | \(y\)-velocity component (\(v\)) |  
-| 7 | Resultant velocity magnitude (\(\sqrt{u^2+v^2}\)) |  
+| 1 | Node index in the \\(x\\)-direction (\\(i\\)) |  
+| 2 | Node index in the \\(y\\)-direction (\\(j\\)) |  
+| 3 | Streamfunction (\\(\psi\\)) |  
+| 4 | Vorticity (\\(\omega\\)) |  
+| 5 | \\(x\\)-velocity component (\\(u\\)) |  
+| 6 | \\(y\\)-velocity component (\\(v\\)) |  
+| 7 | Resultant velocity magnitude (\\(\sqrt{u^2+v^2}\\)) |  
 
 ### 2. **Validation Data (Midline Profiles)**  
 For verification against benchmark results from **Ghia et al. (1982, Re=100)**:  
 
-- `U-Re_x=0.5_parallel.dat`: \(u\)-velocity along the vertical centerline (\(x=0.5\))  
-- `V-Re_x=0.5_parallel.dat`: \(v\)-velocity along the horizontal centerline (\(y=0.5\))  
+- `U-Re_x=0.5_parallel.dat`: \\(u\\)-velocity along the vertical centerline (\(x=0.5\))  
+- `V-Re_x=0.5_parallel.dat`: \\(v\\)-velocity along the horizontal centerline (\\(y=0.5\\))  
 
 These files allow comparison of the computed midline velocities with literature values.  
 
@@ -85,3 +95,4 @@ These files allow comparison of the computed midline velocities with literature 
 ```bash
 g++ Lid_Driven_Cavity.cpp -o cavity_serial
 ./cavity_serial
+```
