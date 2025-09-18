@@ -6,7 +6,7 @@ permalink: /projects/fdm/1D-heat-diffusion-fdm/
 excerpt: "A simple implementation of the 1D heat equation using forward Euler method."
 ---
 
-<div style="padding-top: 5px;"></div>
+<div style="padding-top: 7px;"></div>
 
 # 1D Steady-State Heat Diffusion Solver (C++ with OpenMP)
 

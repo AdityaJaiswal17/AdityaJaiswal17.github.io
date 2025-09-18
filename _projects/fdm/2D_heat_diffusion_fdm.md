@@ -6,7 +6,7 @@ permalink: /projects/fdm/2D-heat-diffusion-fdm/
 excerpt: "A simple implementation of the 2D heat equation using forward Euler method."
 ---
 
-<div style="padding-top: 5px;"></div>
+<div style="padding-top: 7px;"></div>
 
 # 2D Steady-State Heat Diffusion Solver (C++ with OpenMP)
 

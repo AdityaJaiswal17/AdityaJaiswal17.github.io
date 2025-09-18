@@ -9,9 +9,6 @@
 
 main:
 
-  - title: "CV"
-    url: /files/Aditya_Jaiswal_BITS_CV.pdf
-
   - title: "Projects"
     url: "/projects/"
     subnav:
@@ -19,6 +16,9 @@ main:
         url: "/projects/fdm/"
       - title: "Lattice Boltzmann Method"
         url: "/projects/lbm/"
+
+  - title: "CV"
+    url: /files/Aditya_Jaiswal_BITS_CV.pdf
 
   - title: "Undergraduate Thesis"
     url: /undergraduate_thesis/

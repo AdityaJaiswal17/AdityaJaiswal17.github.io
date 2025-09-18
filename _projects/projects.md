@@ -12,6 +12,8 @@ Welcome to my collection of computational methods and numerical analysis project
 
 All the codes are written in C++ along with openMP implementation in some of them (has been mentioned wherever needed). All the data was visualized using [**gnuplot**](http://www.gnuplot.info/) after the results, users can modify and use various ways like [**matplotlib**](https://matplotlib.org/) as well for the visualization.
 
+**Note: All codes presented here were independently developed by me. The links provided lead directly to my GitHub repository.**
+
 Numerical Methods
 ======
 
