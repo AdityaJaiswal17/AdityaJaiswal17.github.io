@@ -1,9 +1,9 @@
 ---
-title: "2D Heat Equation FDM"
+title: "Lid driven cavity FDM"
 layout: default
 method: fdm
-permalink: /projects/fdm/2D-heat-diffusion-fdm/
-excerpt: "A simple implementation of the 2D heat equation using forward Euler method."
+permalink: /projects/fdm/lid-driven-cavity-fdm/
+excerpt: "Lid driven cavity implementation using stream vorticity formulation."
 ---
 <div style="padding-top: 7px;"></div>
 
