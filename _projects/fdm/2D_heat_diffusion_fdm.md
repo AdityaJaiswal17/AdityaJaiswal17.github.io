@@ -45,33 +45,33 @@ In addition to the above, all the walls are insulated as well.
 
 The governing equation for steady-state heat conduction in two dimensions is:
 
-\[
+\\[
 \frac{\partial^2 T}{\partial x^2} + \frac{\partial^2 T}{\partial y^2} = 0
-\]
+\\]
 
 where \\(T(x, y)\\) represents the temperature field.  
 
 Using central finite differences, the discretized form at an interior grid point \\((i, j)\\) is:
 
-\[
+\\[
 T_{i,j} = \frac{1}{2(1+\zeta)} \Big( T_{i+1,j} + T_{i-1,j} + \zeta \big(T_{i,j+1} + T_{i,j-1}\big) \Big)
-\]
+\\]
 
 with
 
-\[
+\\[
 \zeta = \left(\frac{\Delta x}{\Delta y}\right)^2
-\]
+\\]
 
 This iterative relation is applied until the solution converges (\\(\text{error} < 10^{-7}\\)).  
 
 The gradients are computed as:
 
-\[
+\\[
 \frac{\partial T}{\partial x}\bigg|_{i,j} \approx \frac{T_{i+1,j} - T_{i-1,j}}{2 \Delta x}, 
 \quad
 \frac{\partial T}{\partial y}\bigg|_{i,j} \approx \frac{T_{i,j+1} - T_{i,j-1}}{2 \Delta y}
-\]
+\\]
 
 ---
 
