@@ -12,7 +12,7 @@ This project implements a **finite difference method (FDM)** solver for the **1D
 The code is written in **C++** and includes both a **serial implementation** and a **parallel implementation** using **OpenMP**, allowing for performance comparison between the two approaches.  
 
 After execution, the solver generates an `output.dat` file with the following structure:  
-- **Column 1:** Node index ($i = 1, 2, 3, \dots, L_x$)  
+- **Column 1:** Node index (\(i = 1, 2, 3, \dots, L_x\))  
 - **Column 2:** Temperature values computed using the parallel implementation  
 - **Column 3:** Temperature values computed using the serial implementation  
 - **Column 4:** Relative difference (%) between the parallel and serial solutions  
@@ -47,6 +47,6 @@ g++ 1D_Heat_Diff.cpp -fopenmp -o heat_diff
 
 </div>
 
-In the above figures, fig. 1 and fig. 2, the temperature profile is linear and hence matches with the 1D steady state heat equation. Thus, validating our code.
+In the above figures, fig. 1 and fig. 2, the temperature profile is linear which is consistent with the analytical solution and hence matches with the 1D steady state heat equation. Thus, validating our code.
 
 
