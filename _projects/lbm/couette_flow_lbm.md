@@ -2,7 +2,7 @@
 title: "Couette flow LBM"
 layout: default
 method: lbm
-permalink: /projects/fdm/couette-flow-lbm/
+permalink: /projects/lbm/couette-flow-lbm/
 excerpt: "Couette flow implementation using Lattice boltzmann method with BGK."
 ---
 <div style="padding-top: 7px;"></div>
@@ -13,17 +13,10 @@ This project implements the **Lattice Boltzmann Method (LBM)** for solving the *
 
 The code can be found [**here in the GitHub repository**](https://github.com/AdityaJaiswal17/Lattice_Boltzmann_Method/blob/main/CouetteFlow/CouetteFlow.cpp).
 
-
-<figure style="text-align:center;">
-  <img src="/images/self_upload/lbm/couette_ani.gif" 
-       alt="Couette flow animation created using the values obtained from our code."
-       style="width:95%; max-width:500px; border:1px solid #ddd; border-radius:8px; padding:5px;">
-  <figcaption style="margin-top:8px;">
-    Couette flow animation created using the values obtained from our code.
-  </figcaption>
+<figure>
+  <img src="/images/self_upload/lbm/couette_ani.gif" alt="Couette flow animation created using the values obtained from our code.">
+  <figcaption>Couette flow animation created using the values obtained from our code.</figcaption>
 </figure>
-
-
 ---
 
 ## Mathematical Formulation
@@ -75,12 +68,8 @@ The boundary conditions are treated a little differently in Lattice Boltzmann me
 
 ## Output Structure
 
----
-
-## Output Structure
-
 When the solver is executed, it automatically creates an **output/** folder. Inside this folder, the code saves files named in the format: 
-output_t<time>.dat
+output_t`<time>`.dat
 
 where `<time>` corresponds to the iteration number at which the data was written.  
 
