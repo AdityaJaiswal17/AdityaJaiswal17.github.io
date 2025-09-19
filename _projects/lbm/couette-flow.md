@@ -15,7 +15,7 @@ The code can be found [**here in the GitHub repository**](https://github.com/Adi
 
 
 <figure>
-  <img src="/images/self_upload/lbm/couette_ani.mp4" alt="Couette flow animation created using the values obtained from our code.">
+  <img src="/images/self_upload/lbm/couette_ani.gif" alt="Couette flow animation created using the values obtained from our code.">
   <figcaption>Couette flow animation created using the values obtained from our code..</figcaption>
 </figure>
 
@@ -85,7 +85,7 @@ Each file contains the following variables of interest at every lattice node:
 2. **y-index (j)** – lattice index along the wall-normal direction.  
 3. **uₓ** – x-velocity component.  
 4. **uᵧ** – y-velocity component.  
-5. **|u|** – resultant velocity magnitude.  
+5. **u** – resultant velocity magnitude.  
 6. **ρ** – fluid density.  
 
 These files are written at regular intervals (controlled by the parameter `save`) until the system reaches a steady state. The total number of iterations is user-controlled through the parameter `last_itr`. This flexibility allows the user to decide both **how long the simulation runs** and **at what intervals results are stored**.  
