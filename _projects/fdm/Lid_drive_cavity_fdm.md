@@ -121,7 +121,7 @@ sp '<output_file>.dat' using 1:2:7 with image
   <img src="/images/self_upload/fdm/validation_ux.png" alt="Computational vs experimental value for U_x=0.5" style="width:45%; border:1px solid #ddd; border-radius:8px; padding:5px;">
   <img src="/images/self_upload/fdm/validation_vy.png" alt="Computational vs experimental value for V_y=0.5" style="width:45%; border:1px solid #ddd; border-radius:8px; padding:5px;">
   <figcaption style="text-align:center; margin-top:8px;">
-    Computed values of velocity obtained at midlines of the cavity \(U_x \, @ \, x = 0.5\) (left) and \(V_y \, @ \, y = 0.5\) (right) compared with the literature values from <i>Ghia et al.</i> for the configuration when <b>Reynolds number = 100</b>.
+    Computed values of velocity obtained at midlines of the cavity, \(U_x \, @ \, x = 0.5\) (left) and \(V_y \, @ \, y = 0.5\) (right) compared with the literature values from <i>Ghia et al.</i> for the configuration when <b>Reynolds number = 100</b>.
   </figcaption>
 </figure>
 
