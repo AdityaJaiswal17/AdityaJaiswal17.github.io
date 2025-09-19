@@ -148,9 +148,9 @@ The above figure validates our code against literature values from [**Ghia et al
 
 <div style="text-align: center; margin: 15px 0;">
   <figure style="display: inline-block; margin: 0;">
-    <img src="/images/self_upload/fdm/lid_driven_fdm_re200.png" alt="Velocity contours for the configuration when RE = 200." style="width: 80%; height: auto; border-radius: 8px;">
+    <img src="/images/self_upload/fdm/lid_driven_fdm_re200.png" alt="Velocity contours for the configuration when RE = 200." style="width: 90%; height: auto; border-radius: 8px;">
     <figcaption style="font-size: 0.9em; margin-top: 5px;">
-      Velocity contours for the configuration when RE = 200. &gt; 2.
+      Velocity contours for the configuration when RE = 200.
     </figcaption>
   </figure>
 </div>
