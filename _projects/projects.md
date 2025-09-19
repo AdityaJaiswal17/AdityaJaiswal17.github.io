@@ -19,7 +19,6 @@ Numerical Methods
 
 * [**Finite Difference Methods**](/projects/fdm/)
 ======
-## About the Finite Difference Method (FDM)
 
 The **Finite Difference Method (FDM)** is a **deterministic numerical technique** that solves partial differential equations (PDEs) by directly discretizing their differential operators over a computational grid. In this approach, derivatives are approximated by difference quotients, converting the continuous governing equations into a system of algebraic equations that can be solved iteratively or directly.  
 
@@ -30,7 +29,6 @@ Key steps include:
 
 * [**Lattice Boltzmann Method**](/projects/lbm/)
 ======
-## About the Lattice Boltzmann Method (LBM)
 
 The **Lattice Boltzmann Method (LBM)** is a **mesoscopic, transient solver** for fluid dynamics that models the evolution of particle distribution functions on a discrete lattice. Unlike traditional CFD approaches that directly solve the Navier–Stokes equations, LBM is based on the **Boltzmann transport equation** with simplified collision models (e.g., BGK approximation).  
 

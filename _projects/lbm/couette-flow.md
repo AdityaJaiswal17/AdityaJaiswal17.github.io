@@ -15,7 +15,7 @@ The code can be found [**here in the GitHub repository**](https://github.com/Adi
 
 
 <figure>
-  <img src="/images/self_upload/lbm/Validation_Couette.png" alt="Couette flow animation created using the values obtained from our code.">
+  <img src="/images/self_upload/lbm/couette_ani.mp4" alt="Couette flow animation created using the values obtained from our code.">
   <figcaption>Couette flow animation created using the values obtained from our code..</figcaption>
 </figure>
 
