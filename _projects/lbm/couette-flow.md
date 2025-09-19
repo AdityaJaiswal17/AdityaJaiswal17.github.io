@@ -14,10 +14,15 @@ This project implements the **Lattice Boltzmann Method (LBM)** for solving the *
 The code can be found [**here in the GitHub repository**](https://github.com/AdityaJaiswal17/Lattice_Boltzmann_Method/blob/main/CouetteFlow/CouetteFlow.cpp).
 
 
-<figure>
-  <img src="/images/self_upload/lbm/couette_ani.gif" alt="Couette flow animation created using the values obtained from our code.">
-  <figcaption>Couette flow animation created using the values obtained from our code..</figcaption>
+<figure style="text-align:center;">
+  <img src="/images/self_upload/lbm/couette_ani.gif" 
+       alt="Couette flow animation created using the values obtained from our code."
+       style="width:95%; max-width:500px; border:1px solid #ddd; border-radius:8px; padding:5px;">
+  <figcaption style="margin-top:8px;">
+    Couette flow animation created using the values obtained from our code.
+  </figcaption>
 </figure>
+
 
 ---
 
