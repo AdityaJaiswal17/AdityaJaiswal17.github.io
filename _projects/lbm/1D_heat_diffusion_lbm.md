@@ -28,32 +28,32 @@ The LBM is a **mesoscopic numerical method** that models transport phenomena by 
 
 - **D1Q3 Lattice Model:**  
   Each node has 3 discrete velocity directions:  
-  \[
+  \\[
   C = \{0, +1, -1\}
-  \]  
+  \\]  
   with corresponding weights:  
-  \[
+  \\[
   W = \left\{\tfrac{2}{3}, \tfrac{1}{6}, \tfrac{1}{6}\right\}
-  \]  
+  \\]  
 
 - **BGK Collision Operator:**  
   Relaxation toward equilibrium distribution is handled by the single relaxation time (SRT) approximation:  
-  \[
+  \\[
   f_i(x,t+1) = f_i(x,t) - \frac{1}{\tau} \left(f_i(x,t) - f_i^{eq}(x,t)\right)
-  \]  
+  \\]  
 
 - **Equilibrium Distribution:**  
   For thermal problems, the equilibrium function is defined as:  
-  \[
+  \\[
   f_i^{eq}(x,t) = W_i \, T(x,t)
-  \]  
+  \\]  
   where \\( T(x,t) \\) is the local temperature.
 
 - **Thermal Diffusivity Relation:**  
   The thermal diffusivity \\(\alpha\\) is related to the relaxation parameter as:  
-  \[
+  \\[
   \alpha = \frac{1}{3} \left(\tau - \tfrac{1}{2}\right)
-  \]  
+  \\]  
 
 Since LBM inherently models **time evolution**, the solver is **transient**, meaning the simulation progresses over iterations until a steady-state temperature distribution is reached.
 
@@ -100,15 +100,14 @@ The computed temperature profiles are compared with the **analytical solution of
 with boundary conditions applied at both ends and a heat source in the center.  
 The results match the analytical solution well, validating the correctness of the LBM formulation.  
 
-<figure style="text-align:center;">
-<img src="/images/self_upload/lbm/heat_1d_lbm.png" 
-    alt="Steady state temperature profile"
-    style="width:60%; max-width:500px; border:1px solid #ddd; border-radius:8px; padding:5px;">
-<figcaption style="margin-top:8px;">
- Validation of the 1D Heat conduction solver: Computed temperature profile, gives a straight line which validates our code.
-</figcaption>
-</figure>
-
+<div style="text-align: center; margin: 15px 0;">
+  <figure style="display: inline-block; margin: 0;">
+    <img src="/images/self_upload/lbm/heat_1d_lbm.png" alt="Computed temperature profile at steady state, gives a straight line which validates our code." style="width: 90%; height: auto; border-radius: 8px;">
+    <figcaption style="font-size: 0.9em; margin-top: 5px;">
+      Computed temperature profile at steady state, gives a straight line which validates our code.
+    </figcaption>
+  </figure>
+</div>
 ---
 
 ##  Key Features
