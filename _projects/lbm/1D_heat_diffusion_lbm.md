@@ -32,9 +32,9 @@ The LBM is a **mesoscopic numerical method** that models transport phenomena by 
   C = \{0, +1, -1\}
   \\]  
   with corresponding weights:  
-  $$
+  \\[
   W = \left\{ \tfrac{2}{3}, \tfrac{1}{6}, \tfrac{1}{6} \right\}
-  $$
+  \\]
 
 
 - **BGK Collision Operator:**  
