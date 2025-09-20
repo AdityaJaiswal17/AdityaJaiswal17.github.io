@@ -33,7 +33,7 @@ The LBM is a **mesoscopic numerical method** that models transport phenomena by 
   \\]  
   with corresponding weights:  
   \\[
-  W = \left\{ \tfrac{2}{3}, \tfrac{1}{6}, \tfrac{1}{6} \right\}
+  W = \left{ \tfrac{2}{3}, \tfrac{1}{6}, \tfrac{1}{6} \right}
   \\]
 
 
