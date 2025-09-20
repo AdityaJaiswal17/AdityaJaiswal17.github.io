@@ -32,9 +32,10 @@ The LBM is a **mesoscopic numerical method** that models transport phenomena by 
   C = \{0, +1, -1\}
   \\]  
   with corresponding weights:  
-  \\[
-  W = \left\{\tfrac{2}{3}, \tfrac{1}{6}, \tfrac{1}{6}\right\}
-  \\]  
+  $$
+  W = \left\{ \tfrac{2}{3}, \tfrac{1}{6}, \tfrac{1}{6} \right\}
+  $$
+
 
 - **BGK Collision Operator:**  
   Relaxation toward equilibrium distribution is handled by the single relaxation time (SRT) approximation:  
@@ -93,11 +94,11 @@ The solver generates results in two forms:
 ##  Validation
 The computed temperature profiles are compared with the **analytical solution of the 1D steady-state heat conduction equation**:  
 
-\[
+\\[
 \frac{\partial^2 T}{\partial x^2} = 0
-\]  
+\\]  
 
-with boundary conditions applied at both ends and a heat source in the center.  
+With boundary conditions applied at both ends and a heat source in the center.  
 The results match the analytical solution well, validating the correctness of the LBM formulation.  
 
 <div style="text-align: center; margin: 15px 0;">
