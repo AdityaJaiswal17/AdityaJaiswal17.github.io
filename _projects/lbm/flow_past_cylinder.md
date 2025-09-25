@@ -18,11 +18,11 @@ You can find the full code here: [**Github Repository**](https://github.com/Adit
 
 ## Methodology
 
-- The simulation is carried out on a **2D channel domain** with a cylinder of radius \( R = 25 \) placed near the inlet.  
+- The simulation is carried out on a **2D channel domain** with a cylinder of radius \\( R = 25 \\) placed near the inlet.  
 - The governing parameters are:
-  - **Inlet velocity:** \( U_\text{inlet} = 0.1 \)  
-  - **Kinematic viscosity:** \( \nu = 0.05 \)  
-  - **Relaxation time:** \( \tau = 3\nu + \tfrac{1}{2} \)  
+  - **Inlet velocity:** \\( U_\text{inlet} = 0.1 \\)  
+  - **Kinematic viscosity:** \\( \nu = 0.05 \\)  
+  - **Relaxation time:** \\( \tau = 3\nu + \tfrac{1}{2} \\)  
 - **Collision step:** Standard BGK model  
 - **Streaming step:** Nearest-neighbor propagation on the D2Q9 lattice  
 
@@ -44,11 +44,11 @@ The solver also computes the **hydrodynamic forces** acting on the cylinder by e
 Simulation results are stored in the **`output/`** folder at specified intervals.  
 Each file contains:
 
-1. \(x, y\) spatial coordinates  
-2. \(u_x, u_y\) velocity components  
-3. \(|\mathbf{u}|\): magnitude of velocity  
-4. \(\rho\): fluid density  
-5. \(F_x, F_y\): net hydrodynamic force on the cylinder  
+1. \\(x, y\\) spatial coordinates  
+2. \\(u_x, u_y\\) velocity components  
+3. \\(|\mathbf{u}|\\): magnitude of velocity  
+4. \\(\rho\\): fluid density  
+5. \\(F_x, F_y\\): net hydrodynamic force on the cylinder  
 
 For visualization, a helper script **`saveimage.sh`** converts the data files into contour plots. These images can be combined into animations to analyze the unsteady flow evolution.
 
