@@ -17,6 +17,28 @@ The solver is written in **C++** and outputs **full-field velocity and density d
 
 ---
 
+## Animations
+
+Two animations are generated from the simulation outputs:
+
+<div style="display: flex; justify-content: space-around; gap: 20px; align-items: flex-start;">
+
+  <figure style="flex: 1; text-align: center;">
+    <img src="/images/self_upload/lbm/Re_100.gif" 
+         alt="LBM Animation for Re = 100" 
+         style="width: 100%; max-height: 500px; object-fit: contain;">
+    <figcaption>Velocity field animation for \(Re = 100\).</figcaption>
+  </figure>
+
+  <figure style="flex: 1; text-align: center;">
+    <img src="/images/self_upload/lbm/Re_500.gif" 
+         alt="LBM Animation for Re = 500" 
+         style="width: 100%; max-height: 500px; object-fit: contain;">
+    <figcaption>Velocity field animation for \(Re = 500\).</figcaption>
+  </figure>
+
+</div>
+
 ## Methodology
 
 ### Governing Equations
@@ -127,27 +149,7 @@ $$
 
 ---
 
-## Animations
 
-Two animations are generated from the simulation outputs:
-
-<div style="display: flex; justify-content: space-around; gap: 20px; align-items: flex-start;">
-
-  <figure style="flex: 1; text-align: center;">
-    <img src="/images/self_upload/lbm/Re_100.gif" 
-         alt="LBM Animation for Re = 100" 
-         style="width: 100%; max-height: 500px; object-fit: contain;">
-    <figcaption>Velocity field animation for \(Re = 100\).</figcaption>
-  </figure>
-
-  <figure style="flex: 1; text-align: center;">
-    <img src="/images/self_upload/lbm/Re_500.gif" 
-         alt="LBM Animation for Re = 500" 
-         style="width: 100%; max-height: 500px; object-fit: contain;">
-    <figcaption>Velocity field animation for \(Re = 500\).</figcaption>
-  </figure>
-
-</div>
 
 
 ---
