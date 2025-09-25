@@ -119,7 +119,7 @@ $$
 
 <figure style="display: flex; justify-content: center; gap: 20px; align-items: center;">
   <img src="/images/self_upload/lbm/validation_UY.png" alt="Computational vs experimental value for U_x=0.5" style="width:45%; border:1px solid #ddd; border-radius:8px; padding:5px;">
-  <img src="/images/self_upload/lbm/validation_VX.png" alt="Computational vs experimental value for V_y=0.5" style="width:45%; border:1px solid #ddd; border-radius:8px; padding:5px;">
+  <img src="/images/self_upload/lbm/validation_XV.png" alt="Computational vs experimental value for V_y=0.5" style="width:45%; border:1px solid #ddd; border-radius:8px; padding:5px;">
   <figcaption style="text-align:center; margin-top:8px;">
     Computed values of velocity obtained at midlines of the cavity, \(U_x \, @ \, x = 0.5\) (left) and \(V_y \, @ \, y = 0.5\) (right) compared with the literature values from <i>Ghia et al.</i> for the configuration when <b>Reynolds number = 100</b>.
   </figcaption>
@@ -131,22 +131,23 @@ $$
 
 Two animations are generated from the simulation outputs:
 
-<div style="display: flex; justify-content: space-around; gap: 20px;">
+<div style="display: flex; justify-content: space-around; gap: 20px; align-items: flex-start;">
 
   <figure style="flex: 1; text-align: center;">
     <img src="/images/self_upload/lbm/Re_100.gif" 
          alt="LBM Animation for Re = 100" 
-         style="max-width:100%; height:auto;">
+         style="width: 100%; max-height: 500px; object-fit: contain;">
     <figcaption>Velocity field animation for \\(Re = 100\\).</figcaption>
   </figure>
 
   <figure style="flex: 1; text-align: center;">
     <img src="/images/self_upload/lbm/Re_500.gif" 
          alt="LBM Animation for Re = 500" 
-         style="max-width:100%; height:auto;">
+         style="width: 100%; max-height: 500px; object-fit: contain;">
     <figcaption>Velocity field animation for \\(Re = 500\\).</figcaption>
   </figure>
 
 </div>
+
 
 ---
