@@ -62,7 +62,7 @@ For visualization, a helper script **`saveimage.sh`** converts the data files in
 ## Results
 
 <figure style="text-align:center;">
-  <img src="/images/self_upload/lbm/flowPastCylinder.gif" alt="Flow past a cylinder simulated using LBM (D2Q9 lattice, BGK model)" style="width:80%; border:1px solid #ddd; border-radius:8px; padding:5px;">
+  <img src="/images/self_upload/flowPastCylinder.gif" alt="Flow past a cylinder simulated using LBM (D2Q9 lattice, BGK model)" style="width:80%; border:1px solid #ddd; border-radius:8px; padding:5px;">
   <figcaption>
     Flow past a cylinder at Reynolds number = <b>100</b>, simulated using the Lattice Boltzmann Method with OpenMP parallelization.
   </figcaption>
