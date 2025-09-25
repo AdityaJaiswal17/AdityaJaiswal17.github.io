@@ -51,11 +51,11 @@ Each file contains:
 
 1. $$x, y$$ spatial coordinates  
 2. $$u_x, u_y$$ velocity components  
-3. $$|\mathbf{u}|$$: magnitude of velocity  
+3. $$|\vec{u}|$$: magnitude of velocity  
 4. $$\rho$$: fluid density  
 5. $$F_x, F_y$$: net hydrodynamic force on the cylinder  
 
-For visualization, a helper script **`saveimage.sh`** converts the data files into contour plots. These images can be combined into animations to analyze the unsteady flow evolution.
+For visualization, a helper script [**`saveimage.sh`**](https://github.com/AdityaJaiswal17/Lattice_Boltzmann_Method/blob/main/Flow_past_cylinder/saveimage.sh) converts the data files into contour plots. These images can be combined into animations to analyze the unsteady flow evolution.
 
 ---
 
