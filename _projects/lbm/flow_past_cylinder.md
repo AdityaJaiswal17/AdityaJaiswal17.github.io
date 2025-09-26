@@ -51,7 +51,7 @@ Each file contains:
 
 1. $$x, y$$ spatial coordinates  
 2. $$u_x, u_y$$ velocity components  
-3. $$|\vec{u}|$$: magnitude of velocity  
+3. \\(||u||\\): magnitude of velocity  
 4. $$\rho$$: fluid density  
 5. $$F_x, F_y$$: net hydrodynamic force on the cylinder  
 
