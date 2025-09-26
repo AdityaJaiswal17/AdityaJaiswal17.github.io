@@ -17,16 +17,6 @@ All the codes are written in C++ along with openMP implementation in some of the
 Numerical Methods
 ======
 
-* [**Finite Difference Methods**](/projects/fdm/)
-======
-
-The **Finite Difference Method (FDM)** is a **deterministic numerical technique** that solves partial differential equations (PDEs) by directly discretizing their differential operators over a computational grid. In this approach, derivatives are approximated by difference quotients, converting the continuous governing equations into a system of algebraic equations that can be solved iteratively or directly.  
-
-Key steps include:  
-1. **Domain discretization:** The spatial and temporal domain is divided into a structured grid.  
-2. **Differential approximation:** Derivatives (first- and second-order) are replaced with finite difference stencils (e.g., forward, backward, or central schemes).  
-3. **Equation assembly & solution:** The resulting system is solved using iterative methods until convergence.  
-
 * [**Lattice Boltzmann Method**](/projects/lbm/)
 ======
 
@@ -37,6 +27,16 @@ The method works by alternating between two main steps:
 2. **Collision:** Local relaxation drives the system toward an equilibrium distribution.  
 
 Through these steps, LBM captures the **time-dependent (transient) evolution** of the flow field, from initialization until it reaches a steady or statistically stationary state. Unlike, the finite difference method, the discretized equation is not solve directly but the important variables like velocity, pressure, temperature,... etc are recovered indirectly by solving for discretized boltzmann equation which is known as Lattice Boltzmann equation.
+
+* [**Finite Difference Methods**](/projects/fdm/)
+======
+
+The **Finite Difference Method (FDM)** is a **deterministic numerical technique** that solves partial differential equations (PDEs) by directly discretizing their differential operators over a computational grid. In this approach, derivatives are approximated by difference quotients, converting the continuous governing equations into a system of algebraic equations that can be solved iteratively or directly.  
+
+Key steps include:  
+1. **Domain discretization:** The spatial and temporal domain is divided into a structured grid.  
+2. **Differential approximation:** Derivatives (first- and second-order) are replaced with finite difference stencils (e.g., forward, backward, or central schemes).  
+3. **Equation assembly & solution:** The resulting system is solved using iterative methods until convergence.  
 
 
 ---

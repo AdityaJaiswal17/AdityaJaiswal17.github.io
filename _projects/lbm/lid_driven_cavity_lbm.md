@@ -113,7 +113,7 @@ Each saved timestep (`output_t*.dat`) contains:
 2. y-index  
 3. \\(u_x\\)  
 4. \\(u_y\\)  
-5. velocity magnitude \\(|\mathbf{u}|\\)  
+5. velocity magnitude $$(|\mathbf{u}|)$$  
 6. density \\(\rho\\)  
 
 ---
@@ -147,9 +147,4 @@ $$
   </figcaption>
 </figure>
 
----
 
-
-
-
----
