@@ -113,6 +113,8 @@ This is equivalent to a body force but is introduced via **pressure (density) bo
 - **Right wall**: Outlet pressure (lower density, \\( \rho = 1.0 - \Delta \rho/2 \\)).  
 - **Top & Bottom walls**: No-slip (bounce-back scheme).  
 
+**NOTE**: The boundaries of the left and the right walls are set to a differential \\( \Delta \rho/2 \\) density difference to establish pressure difference as a consequence. Since, P = \\(\rho c_{s}^2 \\).
+
 ### Code Implementation
 - Pressure gradient is introduced by modifying the density at inlet/outlet.  
 - No explicit forcing term is used.  
@@ -120,7 +122,7 @@ This is equivalent to a body force but is introduced via **pressure (density) bo
 ### Simulation Parameters
 - Reynolds number: **Re = 100**  
 - Domain size: \\(501 \times 51\\)  
-- Pressure difference (density difference): \\( \Delta \rho = 0.03 \\)  
+- Pressure difference (density difference): \\( \Delta \rho = 0.03 \\)  $$\rightarrow$$ \\(\Delta P = 0.01 \\), Since, P = \\(\rho c_{s}^2 \\)
 - Kinematic viscosity: \\( \nu = 0.05 \\)  
 
 ### Results
@@ -145,12 +147,13 @@ Shown below is the velocity profile and it converges to a parabolic distribution
 
 ## Validation
 
-Both cases were validated against the analytical Poiseuille velocity profile:  
+Both cases were validated against the analytical Poiseuille velocity profile (The equations were derived by taking the bottom wall as reference):  
 
 ### Gravity driven -
 $$
 u(y) = \frac{\rho g}{2 \mu} \, y (H - y), \quad u_{\text{max}} = \frac{\rho g H^2}{8 \mu}
 $$
+Where, \\(\mu \\) is the viscosity.
 
 - Gravity-driven:
 <div style="text-align: center; margin: 8px 0;">
@@ -167,10 +170,9 @@ $$
 
 ### Pressure driven -
 $$
-u(y) = \frac{1}{2\nu}\frac{\Delta P}{L} \left( h^2 - y^2 \right)
-$$  
-
-where \\(h\\) is half the channel height.  
+u(y) = \fra{1}{2\mu} \frac{\Delta P}{L} \, y(H - y), \quad u_{\text{max}} = \frac{\Delta P H^2}{8 \mu L}
+$$
+Where, \\(\mu \\) is the viscosity, \\(L \\) is the horizontal length and \\(\Delta P \\) is the pressure difference.
 
 - Pressure-driven:
 <div style="text-align: center; margin: 8px 0;">
