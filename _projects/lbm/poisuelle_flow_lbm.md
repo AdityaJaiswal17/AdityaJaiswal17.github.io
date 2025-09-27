@@ -18,7 +18,7 @@ Two different driving mechanisms are considered:
 
 Both cases are solved with similar numerical formulations but differ in how the external forcing or boundary conditions are applied.
 
-You can find the full code here (includes both gravity driven and pressure driven in their respective folders): [**Github Repository**](https://github.com/AdityaJaiswal17/Lattice_Boltzmann_Method/tree/main/PoisuelleFlow)
+You can find the full code here (<i>includes both gravity driven and pressure driven in their respective folder<i>): [**Github Repository**](https://github.com/AdityaJaiswal17/Lattice_Boltzmann_Method/tree/main/PoisuelleFlow)
 
 ---
 
@@ -56,7 +56,7 @@ $$
 
 ### Problem Description
 The channel flow is driven by a **constant gravitational body force** applied in the \(x\)-direction.  
-The forcing is introduced using the **Guo forcing scheme**:
+The forcing is introduced using the **Guo forcing scheme** by [**Guo et. al (2002)**](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.65.046308):
 
 $$
 F_i = \left(1 - \tfrac{1}{2\tau}\right) w_i 
@@ -66,7 +66,7 @@ F_i = \left(1 - \tfrac{1}{2\tau}\right) w_i
 \right] \cdot \rho \mathbf{g}
 $$
 
-where \\( \mathbf{g} = (g_x, 0) \\).
+where, \\( \mathbf{g} = (g_x, 0) \\).
 
 ### Boundary Conditions
 - **Top & Bottom walls**: No-slip (bounce-back scheme).  
@@ -78,13 +78,16 @@ where \\( \mathbf{g} = (g_x, 0) \\).
 
 ### Simulation Parameters
 - Reynolds number: **Re = 100**  
-- Domain size: \\(801 \times 81\\)  
+- Domain size: \\(401 \times 41\\)  
 - Gravity: \\( g_x = 1.25 \times 10^{-5} \\)  
 - Kinematic viscosity: \\( \nu = 0.1 \\)  
-- Maximum velocity: \\( u_{max} \approx 0.1 \\)  
 
 ### Results
-The velocity profile converges to a parabolic distribution as expected for Poiseuille flow.  
+Shown below is the velocity profile and it converges to a parabolic distribution as expected for Poiseuille flow. 
+<figure>
+  <img src="/images/self_upload/lbm/gravity_driven_U_profile.png" alt="Velocity profile for Gravity driven poiseuille flow.">
+  <figcaption>Velocity profile for Gravity driven poiseuille flow.</figcaption>
+</figure>
 
 **Animation:**  
 <figure>
@@ -116,12 +119,16 @@ This is equivalent to a body force but is introduced via **pressure (density) bo
 - Kinematic viscosity: \\( \nu = 0.05 \\)  
 
 ### Results
-The velocity profile matches the expected parabolic Poiseuille distribution.  
+Shown below is the velocity profile and it converges to a parabolic distribution as expected for Poiseuille flow. 
+<figure>
+  <img src="/images/self_upload/lbm/pressure_driven_U_profile.png" alt="Velocity profile for Pressure driven poiseuille flow.">
+  <figcaption>Velocity profile for Gravity driven poiseuille flow.</figcaption>
+</figure> 
 
 **Animation:**  
 <figure>
-  <img src="/images/self_upload/lbm/pressure_driven.gif" alt="Gravity driven poiseuille flow created using the values obtained from our code.">
-  <figcaption>Gravity driven poiseuille flow created using the values obtained from our code.</figcaption>
+  <img src="/images/self_upload/lbm/pressure_driven.gif" alt="Pressure driven poiseuille flow created using the values obtained from our code.">
+  <figcaption>Pressure driven poiseuille flow created using the values obtained from our code.</figcaption>
 </figure>
 
 ---
@@ -144,25 +151,31 @@ $$
 where \\(h\\) is half the channel height.  
 
 **Validation Figures:**  
-- Gravity-driven: 
-  <div style="text-align: center; margin: 15px 0;">
-  <figure style="display: inline-block; margin: 0;">
-    <img src="/images/self_upload/lbm/validation_poisuelleGrav.png" alt="Computed values compared with the values obtained from the analytical solution." style="width: 90%; height: auto; border-radius: 8px;">
-    <figcaption style="font-size: 0.9em; margin-top: 5px;">
-      Computed values compared with the values obtained from the analytical solution for <b> Gravity driven flow <b>.
+- Gravity-driven:
+<div style="text-align: center; margin: 10px 0;">
+  <figure style="display: inline-block; max-width: 600px; margin: 0;">
+    <img src="/images/self_upload/lbm/validation_poisuelleGrav.png" 
+         alt="Comparison of computed and analytical solutions for gravity-driven flow." 
+         style="width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px;">
+    <figcaption style="font-size: 0.85em; margin-top: 5px; color: #555;">
+      Computed values compared with the analytical solution for <b>gravity-driven flow</b>.
     </figcaption>
   </figure>
 </div>
 
-- Pressure-driven: 
-  <div style="text-align: center; margin: 15px 0;">
-  <figure style="display: inline-block; margin: 0;">
-    <img src="/images/self_upload/lbm/validation_poisuelleFlow.png" alt="Computed values compared with the values obtained from the analytical solution." style="width: 90%; height: auto; border-radius: 8px;">
-    <figcaption style="font-size: 0.9em; margin-top: 5px;">
-      Computed values compared with the values obtained from the analytical solution for <b> Pressure driven flow <b>.
+
+- Pressure-driven:
+<div style="text-align: center; margin: 10px 0;">
+  <figure style="display: inline-block; max-width: 600px; margin: 0;">
+    <img src="/images/self_upload/lbm/validation_poisuelleFlow.png" 
+         alt="Comparison of computed and analytical solutions for pressure-driven flow." 
+         style="width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px;">
+    <figcaption style="font-size: 0.85em; margin-top: 5px; color: #555;">
+      Computed values compared with the analytical solution for <b>pressure-driven flow</b>.
     </figcaption>
   </figure>
 </div>
+
 
 ---
 
