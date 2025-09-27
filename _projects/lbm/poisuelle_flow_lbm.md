@@ -84,10 +84,15 @@ where, \\( \mathbf{g} = (g_x, 0) \\).
 
 ### Results
 Shown below is the velocity profile and it converges to a parabolic distribution as expected for Poiseuille flow. 
-<figure>
-  <img src="/images/self_upload/lbm/gravity_driven_U_profile.png" alt="Velocity profile for Gravity driven poiseuille flow.">
-  <figcaption>Velocity profile for Gravity driven poiseuille flow.</figcaption>
+<figure style="display: inline-block; max-width: 380px; margin: 8px 0; text-align: center;">
+  <img src="/images/self_upload/lbm/gravity_driven_U_profile.png" 
+       alt="Velocity profile for gravity-driven Poiseuille flow." 
+       style="width: 100%; height: auto; border: 1px solid #ccc; border-radius: 3px;">
+  <figcaption style="font-size: 0.8em; margin-top: 4px; color: #555;">
+    Velocity profile for <b>gravity-driven Poiseuille flow</b>.
+  </figcaption>
 </figure>
+
 
 **Animation:**  
 <figure>
@@ -120,10 +125,15 @@ This is equivalent to a body force but is introduced via **pressure (density) bo
 
 ### Results
 Shown below is the velocity profile and it converges to a parabolic distribution as expected for Poiseuille flow. 
-<figure>
-  <img src="/images/self_upload/lbm/pressure_driven_U_profile.png" alt="Velocity profile for Pressure driven poiseuille flow.">
-  <figcaption>Velocity profile for Gravity driven poiseuille flow.</figcaption>
-</figure> 
+<figure style="display: inline-block; max-width: 380px; margin: 8px 0; text-align: center;">
+  <img src="/images/self_upload/lbm/pressure_driven_U_profile.png" 
+       alt="Velocity profile for pressure-driven Poiseuille flow." 
+       style="width: 100%; height: auto; border: 1px solid #ccc; border-radius: 3px;">
+  <figcaption style="font-size: 0.8em; margin-top: 4px; color: #555;">
+    Velocity profile for <b>pressure-driven Poiseuille flow</b>.
+  </figcaption>
+</figure>
+
 
 **Animation:**  
 <figure>
@@ -139,8 +149,20 @@ Both cases were validated against the analytical Poiseuille velocity profile:
 
 ### Gravity driven -
 $$
-u_x(y) = \frac{\rho g}{2 \mu} \, y (H - y), \quad u_{x,\text{max}} = \frac{\rho g H^2}{8 \mu}
+u(y) = \frac{\rho g}{2 \mu} \, y (H - y), \quad u_{\text{max}} = \frac{\rho g H^2}{8 \mu}
 $$
+
+- Gravity-driven:
+<div style="text-align: center; margin: 8px 0;">
+  <figure style="display: inline-block; max-width: 380px; margin: 0;">
+    <img src="/images/self_upload/lbm/validation_poisuelleGrav.png" 
+         alt="Comparison of computed and analytical solutions for gravity-driven flow." 
+         style="width: 100%; height: auto; border: 1px solid #ccc; border-radius: 3px;">
+    <figcaption style="font-size: 0.8em; margin-top: 4px; color: #555;">
+      Computed values compared with the analytical solution for <b>gravity-driven flow</b>.
+    </figcaption>
+  </figure>
+</div>
 
 
 ### Pressure driven -
@@ -150,40 +172,18 @@ $$
 
 where \\(h\\) is half the channel height.  
 
-**Validation Figures:**  
-- Gravity-driven:
-<div style="text-align: center; margin: 10px 0;">
-  <figure style="display: inline-block; max-width: 600px; margin: 0;">
-    <img src="/images/self_upload/lbm/validation_poisuelleGrav.png" 
-         alt="Comparison of computed and analytical solutions for gravity-driven flow." 
-         style="width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px;">
-    <figcaption style="font-size: 0.85em; margin-top: 5px; color: #555;">
-      Computed values compared with the analytical solution for <b>gravity-driven flow</b>.
-    </figcaption>
-  </figure>
-</div>
-
-
 - Pressure-driven:
-<div style="text-align: center; margin: 10px 0;">
-  <figure style="display: inline-block; max-width: 600px; margin: 0;">
+<div style="text-align: center; margin: 8px 0;">
+  <figure style="display: inline-block; max-width: 380px; margin: 0;">
     <img src="/images/self_upload/lbm/validation_poisuelleFlow.png" 
          alt="Comparison of computed and analytical solutions for pressure-driven flow." 
-         style="width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px;">
-    <figcaption style="font-size: 0.85em; margin-top: 5px; color: #555;">
+         style="width: 100%; height: auto; border: 1px solid #ccc; border-radius: 3px;">
+    <figcaption style="font-size: 0.8em; margin-top: 4px; color: #555;">
       Computed values compared with the analytical solution for <b>pressure-driven flow</b>.
     </figcaption>
   </figure>
 </div>
 
-
----
-
-## Animations
-
-- Gravity-driven Poiseuille flow @ **Re = 100**: *(Insert animation here)*  
-- Pressure-driven Poiseuille flow @ **Re = 100**: *(Insert animation here)*  
-- Additional case @ **Re = 500** (if applicable): *(Insert animation here)*  
 
 ---
 
