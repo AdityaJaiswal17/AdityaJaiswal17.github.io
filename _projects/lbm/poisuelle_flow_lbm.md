@@ -151,9 +151,9 @@ Both cases were validated against the analytical Poiseuille velocity profile (Th
 
 ### Gravity driven -
 $$
-u(y) = \frac{\rho g}{2 \mu} \, y (H - y), \quad u_{\text{max}} = \frac{\rho g H^2}{8 \mu}
+u(y) = \frac{\rho g}{2 \mu} \, y (H - y), \quad u_{\text{max}} = \frac{\rho g H^2}{8 \mu} \\
+\text{Where, \\(\mu \\) is the viscosity.}
 $$
-Where, \\(\mu \\) is the viscosity.
 
 - Gravity-driven:
 <div style="text-align: center; margin: 8px 0;">
@@ -170,9 +170,9 @@ Where, \\(\mu \\) is the viscosity.
 
 ### Pressure driven -
 $$
-u(y) = \fra{1}{2\mu} \frac{\Delta P}{L} \, y(H - y), \quad u_{\text{max}} = \frac{\Delta P H^2}{8 \mu L}
+u(y) = \frac{1}{2\mu} \frac{\Delta P}{L} \, y(H - y), \quad u_{\text{max}} = \frac{\Delta P H^2}{8 \mu L} \\
+\text{Where, \\(\mu \\) is the viscosity, \\(L \\) is the horizontal length and \\(\Delta P \\) is the pressure difference.}
 $$
-Where, \\(\mu \\) is the viscosity, \\(L \\) is the horizontal length and \\(\Delta P \\) is the pressure difference.
 
 - Pressure-driven:
 <div style="text-align: center; margin: 8px 0;">
