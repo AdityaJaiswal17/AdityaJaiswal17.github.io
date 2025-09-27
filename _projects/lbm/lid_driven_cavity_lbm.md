@@ -24,14 +24,14 @@ Two animations are generated from the simulation outputs:
 <div style="display: flex; justify-content: space-around; gap: 20px; align-items: flex-start;">
 
   <figure style="flex: 1; text-align: center;">
-    <img src="/images/self_upload/lbm/Re_100.gif" 
+    <img src="/images/self_upload/lbm/Re_100_lowres.gif" 
          alt="LBM Animation for Re = 100" 
          style="width: 100%; max-height: 500px; object-fit: contain;">
     <figcaption>Velocity field animation for \(Re = 100\).</figcaption>
   </figure>
 
   <figure style="flex: 1; text-align: center;">
-    <img src="/images/self_upload/lbm/Re_500.gif" 
+    <img src="/images/self_upload/lbm/Re_500_lowres.gif" 
          alt="LBM Animation for Re = 500" 
          style="width: 100%; max-height: 500px; object-fit: contain;">
     <figcaption>Velocity field animation for \(Re = 500\).</figcaption>
@@ -113,7 +113,7 @@ Each saved timestep (`output_t*.dat`) contains:
 2. y-index  
 3. \\(u_x\\)  
 4. \\(u_y\\)  
-5. velocity magnitude \\(||u||\\) 
+5. velocity magnitude \\(u\\) 
 6. density \\(\rho\\)  
 
 ---
