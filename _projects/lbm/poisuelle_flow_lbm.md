@@ -18,6 +18,8 @@ Two different driving mechanisms are considered:
 
 Both cases are solved with similar numerical formulations but differ in how the external forcing or boundary conditions are applied.
 
+You can find the full code here (includes both gravity driven and pressure driven in their respective folders): [**Github Repository**](https://github.com/AdityaJaiswal17/Lattice_Boltzmann_Method/tree/main/PoisuelleFlow)
+
 ---
 
 ## Governing Equations
@@ -30,16 +32,16 @@ f_i(\mathbf{x}+\mathbf{c}_i \Delta t, t + \Delta t) - f_i(\mathbf{x}, t) =
 $$
 
 where:  
-- \( f_i \) : particle distribution function in direction \(i\)  
-- \( f_i^{eq} \) : equilibrium distribution  
-- \( \tau \) : relaxation time, related to kinematic viscosity as  
+- \\( f_i \\) : particle distribution function in direction \(i\)  
+- \\( f_i^{eq} \\) : equilibrium distribution  
+- \\( \tau \\) : relaxation time, related to kinematic viscosity as  
 
 $$
 \nu = c_s^2 \left( \tau - \tfrac{1}{2} \right)
 $$  
 
-- \( F_i \) : external forcing term (used in the gravity-driven case)  
-- \( c_s^2 = \frac{1}{3} \) : lattice speed of sound squared  
+- \\( F_i \\) : external forcing term (used in the gravity-driven case)  
+- \\( c_s^2 = \frac{1}{3} \\) : lattice speed of sound squared  
 
 The macroscopic variables are recovered as:  
 
@@ -64,7 +66,7 @@ F_i = \left(1 - \tfrac{1}{2\tau}\right) w_i
 \right] \cdot \rho \mathbf{g}
 $$
 
-where \( \mathbf{g} = (g_x, 0) \).
+where \\( \mathbf{g} = (g_x, 0) \\).
 
 ### Boundary Conditions
 - **Top & Bottom walls**: No-slip (bounce-back scheme).  
@@ -76,19 +78,19 @@ where \( \mathbf{g} = (g_x, 0) \).
 
 ### Simulation Parameters
 - Reynolds number: **Re = 100**  
-- Domain size: \(801 \times 81\)  
-- Gravity: \( g_x = 1.25 \times 10^{-5} \)  
-- Kinematic viscosity: \( \nu = 0.1 \)  
-- Maximum velocity: \( u_{max} \approx 0.1 \)  
+- Domain size: \\(801 \times 81\\)  
+- Gravity: \\( g_x = 1.25 \times 10^{-5} \\)  
+- Kinematic viscosity: \\( \nu = 0.1 \\)  
+- Maximum velocity: \\( u_{max} \approx 0.1 \\)  
 
 ### Results
 The velocity profile converges to a parabolic distribution as expected for Poiseuille flow.  
 
-**Validation Figure:**  
-*(Insert analytical vs computational velocity profile plot here)*
-
 **Animation:**  
-- *(Insert animation of velocity field for Re = 100)*  
+<figure>
+  <img src="/images/self_upload/lbm/gravity_driven.gif" alt="Gravity driven poiseuille flow created using the values obtained from our code.">
+  <figcaption>Gravity driven poiseuille flow created using the values obtained from our code.</figcaption>
+</figure>
 
 ---
 
@@ -99,29 +101,28 @@ The channel flow is driven by a **pressure gradient** applied through a density 
 This is equivalent to a body force but is introduced via **pressure (density) boundary conditions**.
 
 ### Boundary Conditions
-- **Left wall**: Inlet pressure (higher density, \( \rho = 1.0 + \Delta \rho/2 \)).  
-- **Right wall**: Outlet pressure (lower density, \( \rho = 1.0 - \Delta \rho/2 \)).  
+- **Left wall**: Inlet pressure (higher density, \\( \rho = 1.0 + \Delta \rho/2 \\)).  
+- **Right wall**: Outlet pressure (lower density, \\( \rho = 1.0 - \Delta \rho/2 \\)).  
 - **Top & Bottom walls**: No-slip (bounce-back scheme).  
 
 ### Code Implementation
 - Pressure gradient is introduced by modifying the density at inlet/outlet.  
 - No explicit forcing term is used.  
-- Like the gravity-driven case, `<omp.h>` is included but OpenMP is **not actively implemented**.  
 
 ### Simulation Parameters
 - Reynolds number: **Re = 100**  
-- Domain size: \(501 \times 51\)  
-- Pressure difference (density difference): \( \Delta \rho = 0.03 \)  
-- Kinematic viscosity: \( \nu = 0.05 \)  
+- Domain size: \\(501 \times 51\\)  
+- Pressure difference (density difference): \\( \Delta \rho = 0.03 \\)  
+- Kinematic viscosity: \\( \nu = 0.05 \\)  
 
 ### Results
 The velocity profile matches the expected parabolic Poiseuille distribution.  
 
-**Validation Figure:**  
-*(Insert analytical vs computational velocity profile plot here)*
-
 **Animation:**  
-- *(Insert animation of velocity field for Re = 100)*  
+<figure>
+  <img src="/images/self_upload/lbm/pressure_driven.gif" alt="Gravity driven poiseuille flow created using the values obtained from our code.">
+  <figcaption>Gravity driven poiseuille flow created using the values obtained from our code.</figcaption>
+</figure>
 
 ---
 
@@ -129,15 +130,39 @@ The velocity profile matches the expected parabolic Poiseuille distribution.
 
 Both cases were validated against the analytical Poiseuille velocity profile:  
 
+### Gravity driven -
+$$
+u_x(y) = \frac{\rho g}{2 \mu} \, y (H - y), \quad u_{x,\text{max}} = \frac{\rho g H^2}{8 \mu}
+$$
+
+
+### Pressure driven -
 $$
 u(y) = \frac{1}{2\nu}\frac{\Delta P}{L} \left( h^2 - y^2 \right)
 $$  
 
-where \(h\) is half the channel height.  
+where \\(h\\) is half the channel height.  
 
 **Validation Figures:**  
-- Gravity-driven: *(Insert validation plot here)*  
-- Pressure-driven: *(Insert validation plot here)*  
+- Gravity-driven: 
+  <div style="text-align: center; margin: 15px 0;">
+  <figure style="display: inline-block; margin: 0;">
+    <img src="/images/self_upload/lbm/validation_poisuelleGrav.png" alt="Computed values compared with the values obtained from the analytical solution." style="width: 90%; height: auto; border-radius: 8px;">
+    <figcaption style="font-size: 0.9em; margin-top: 5px;">
+      Computed values compared with the values obtained from the analytical solution for <b> Gravity driven flow <b>.
+    </figcaption>
+  </figure>
+</div>
+
+- Pressure-driven: 
+  <div style="text-align: center; margin: 15px 0;">
+  <figure style="display: inline-block; margin: 0;">
+    <img src="/images/self_upload/lbm/validation_poisuelleFlow.png" alt="Computed values compared with the values obtained from the analytical solution." style="width: 90%; height: auto; border-radius: 8px;">
+    <figcaption style="font-size: 0.9em; margin-top: 5px;">
+      Computed values compared with the values obtained from the analytical solution for <b> Pressure driven flow <b>.
+    </figcaption>
+  </figure>
+</div>
 
 ---
 
