@@ -84,14 +84,17 @@ where, \\( \mathbf{g} = (g_x, 0) \\).
 
 ### Results
 Shown below is the velocity profile and it converges to a parabolic distribution as expected for Poiseuille flow. 
-<figure style="display: inline-block; max-width: 380px; margin: 8px 0; text-align: center;">
-  <img src="/images/self_upload/lbm/gravity_driven_U_profile.png" 
-       alt="Velocity profile for gravity-driven Poiseuille flow." 
-       style="width: 100%; height: auto; border: 1px solid #ccc; border-radius: 3px;">
-  <figcaption style="font-size: 0.8em; margin-top: 4px; color: #555;">
-    Velocity profile for <b>gravity-driven Poiseuille flow</b>.
-  </figcaption>
-</figure>
+<div style="text-align: center;">
+  <figure style="display: inline-block; max-width: 380px; margin: 8px 0;">
+    <img src="/images/self_upload/lbm/gravity_driven_U_profile.png" 
+         alt="Velocity profile for gravity-driven Poiseuille flow." 
+         style="width: 100%; height: auto; border: 1px solid #ccc; border-radius: 3px;">
+    <figcaption style="font-size: 0.8em; margin-top: 4px; color: #555;">
+      Velocity profile for <b>gravity-driven Poiseuille flow</b>.
+    </figcaption>
+  </figure>
+</div>
+
 
 
 **Animation:**  
@@ -129,14 +132,17 @@ Here the Force term will vanish from the Lattice Boltzmann equations due to the 
 
 ### Results
 Shown below is the velocity profile and it converges to a parabolic distribution as expected for Poiseuille flow. 
-<figure style="display: inline-block; max-width: 380px; margin: 8px 0; text-align: center;">
-  <img src="/images/self_upload/lbm/pressure_driven_U_profile.png" 
-       alt="Velocity profile for pressure-driven Poiseuille flow." 
-       style="width: 100%; height: auto; border: 1px solid #ccc; border-radius: 3px;">
-  <figcaption style="font-size: 0.8em; margin-top: 4px; color: #555;">
-    Velocity profile for <b>pressure-driven Poiseuille flow</b>.
-  </figcaption>
-</figure>
+<div style="text-align: center;">
+  <figure style="display: inline-block; max-width: 380px; margin: 8px 0;">
+    <img src="/images/self_upload/lbm/pressure_driven_U_profile.png" 
+         alt="Velocity profile for pressure-driven Poiseuille flow." 
+         style="width: 100%; height: auto; border: 1px solid #ccc; border-radius: 3px;">
+    <figcaption style="font-size: 0.8em; margin-top: 4px; color: #555;">
+      Velocity profile for <b>pressure-driven Poiseuille flow</b>.
+    </figcaption>
+  </figure>
+</div>
+
 
 
 **Animation:**  
@@ -153,9 +159,12 @@ Both cases were validated against the analytical Poiseuille velocity profile (Th
 
 ### Gravity driven -
 $$
-u(y) = \frac{\rho g}{2 \mu} \, y (H - y), \quad u_{\text{max}} = \frac{\rho g H^2}{8 \mu} \\
-\text{Where, \\(\mu \\) is the viscosity.}
-$$
+u(y) = \frac{\rho g}{2 \mu} \, y (H - y), \quad u_{\text{max}} = \frac{\rho g H^2}{8 \mu}
+$$ 
+
+
+Where, \\(\mu \\) is the viscosity.
+
 
 - Gravity-driven:
 <div style="text-align: center; margin: 8px 0;">
@@ -172,9 +181,12 @@ $$
 
 ### Pressure driven -
 $$
-u(y) = \frac{1}{2\mu} \frac{\Delta P}{L} \, y(H - y), \quad u_{\text{max}} = \frac{\Delta P H^2}{8 \mu L} \\
-\text{Where, \\(\mu \\) is the viscosity, \\(L \\) is the horizontal length and \\(\Delta P \\) is the pressure difference.}
+u(y) = \frac{1}{2\mu} \frac{\Delta P}{L} \, y(H - y), \quad u_{\text{max}} = \frac{\Delta P H^2}{8 \mu L} 
 $$
+
+
+Where, \\(\mu \\) is the viscosity, \\(L \\) is the horizontal length and \\(\Delta P \\) is the pressure difference.
+
 
 - Pressure-driven:
 <div style="text-align: center; margin: 8px 0;">
