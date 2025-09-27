@@ -108,6 +108,8 @@ Shown below is the velocity profile and it converges to a parabolic distribution
 The channel flow is driven by a **pressure gradient** applied through a density difference at the inlet and outlet.  
 This is equivalent to a body force but is introduced via **pressure (density) boundary conditions**.
 
+Here the Force term will vanish from the Lattice Boltzmann equations due to the absence of any external forces \\(F_i = 0 \\).
+
 ### Boundary Conditions
 - **Left wall**: Inlet pressure (higher density, \\( \rho = 1.0 + \Delta \rho/2 \\)).  
 - **Right wall**: Outlet pressure (lower density, \\( \rho = 1.0 - \Delta \rho/2 \\)).  
