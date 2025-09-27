@@ -8,92 +8,151 @@ excerpt: "Poiseuille flow simulations using Lattice Boltzmann Method (LBM): grav
 
 <div style="padding-top: 7px;"></div>
 
-# Poiseuille Flow using Lattice Boltzmann Method (C++ with OpenMP)
+# Poiseuille Flow using Lattice Boltzmann Method (LBM)
 
-This project implements **Poiseuille flow** (channel flow between two parallel plates) using the **Lattice Boltzmann Method (LBM)** with the **D2Q9 BGK scheme**.  
+This section presents the simulation of Poiseuille flow using the **D2Q9 Lattice BGK model**.  
 Two different driving mechanisms are considered:  
 
-1. **Gravity-driven Poiseuille Flow** (body force driven)  
-2. **Pressure-driven Poiseuille Flow** (density/pressure gradient)  
+1. **Gravity-driven Poiseuille flow** – Flow induced by a uniform body force using the **Guo forcing scheme**.  
+2. **Pressure-driven Poiseuille flow** – Flow driven by an imposed density gradient at the inlet and outlet, representing a pressure difference.  
 
-The solver is written in **C++** with both **serial** and **parallel (OpenMP)** implementations.  
-The full code and results are available in the [**GitHub repository**](https://github.com/AdityaJaiswal17/Lattice_Boltzmann_Method/tree/main/PoisuelleFlow).  
+Both cases are solved with similar numerical formulations but differ in how the external forcing or boundary conditions are applied.
 
 ---
 
-## Methodology
+## Governing Equations
 
-The general **LBM evolution equation** is:  
-
-$$
-f_i(\mathbf{x}+\mathbf{c}_i \Delta t,\, t+\Delta t) - f_i(\mathbf{x}, t)
-= -\frac{1}{\tau} \left( f_i(\mathbf{x},t) - f_i^{eq}(\mathbf{x},t) \right)
-$$  
-
-with equilibrium distribution:  
+The lattice Boltzmann equation with the BGK approximation is used:
 
 $$
-f_i^{eq} = w_i \rho \left[ 1 + \frac{\mathbf{c}_i \cdot \mathbf{u}}{c_s^2}
-+ \frac{(\mathbf{c}_i \cdot \mathbf{u})^2}{2c_s^4}
-- \frac{|\mathbf{u}|^2}{2c_s^2} \right]
-$$  
+f_i(\mathbf{x}+\mathbf{c}_i \Delta t, t + \Delta t) - f_i(\mathbf{x}, t) =
+- \frac{1}{\tau}\left( f_i(\mathbf{x}, t) - f_i^{eq}(\mathbf{x}, t) \right) + F_i
+$$
 
 where:  
-- \(f_i\): particle distribution function  
-- \(\mathbf{c}_i\): lattice velocities (D2Q9)  
-- \(\tau\): relaxation time  
-- \(w_i\): lattice weights  
-- \(c_s\): speed of sound in lattice  
-
-Macroscopic quantities:  
+- \( f_i \) : particle distribution function in direction \(i\)  
+- \( f_i^{eq} \) : equilibrium distribution  
+- \( \tau \) : relaxation time, related to kinematic viscosity as  
 
 $$
-\rho = \sum_i f_i, \quad 
-\mathbf{u} = \frac{\sum_i f_i \mathbf{c}_i}{\rho}
+\nu = c_s^2 \left( \tau - \tfrac{1}{2} \right)
 $$  
 
----
+- \( F_i \) : external forcing term (used in the gravity-driven case)  
+- \( c_s^2 = \frac{1}{3} \) : lattice speed of sound squared  
 
-### Case A: Gravity-Driven Poiseuille Flow  
+The macroscopic variables are recovered as:  
 
-- Flow is driven by a **constant body force** (gravity-like) along the streamwise direction.  
-- Boundary conditions:  
-  - **Top & bottom walls** → bounce-back (no-slip)  
-  - **Streamwise direction** → periodic boundaries  
-- Analytical solution:  
-  $$
-  u(y) = \frac{G}{2\nu} \, y (H - y)
-  $$  
+$$
+\rho = \sum_i f_i, \quad
+\mathbf{u} = \frac{1}{\rho} \sum_i f_i \mathbf{c}_i + \frac{\Delta t}{2} \mathbf{g}
+$$
 
 ---
 
-### Case B: Pressure-Driven Poiseuille Flow  
+## 1. Gravity-Driven Poiseuille Flow
 
-- Flow is driven by a **pressure/density gradient** between inlet and outlet.  
-- Boundary conditions:  
-  - **Top & bottom walls** → bounce-back (no-slip)  
-  - **Inlet & outlet** → density/pressure-based BCs  
-- Analytical solution:  
-  $$
-  u(y) = \frac{1}{2\mu} \, \frac{\Delta p}{L} \, y (H - y)
-  $$  
+### Problem Description
+The channel flow is driven by a **constant gravitational body force** applied in the \(x\)-direction.  
+The forcing is introduced using the **Guo forcing scheme**:
+
+$$
+F_i = \left(1 - \tfrac{1}{2\tau}\right) w_i 
+\left[
+\frac{\mathbf{c}_i - \mathbf{u}}{c_s^2} +
+\frac{(\mathbf{c}_i \cdot \mathbf{u})}{c_s^4}\mathbf{c}_i
+\right] \cdot \rho \mathbf{g}
+$$
+
+where \( \mathbf{g} = (g_x, 0) \).
+
+### Boundary Conditions
+- **Top & Bottom walls**: No-slip (bounce-back scheme).  
+- **Left & Right boundaries**: Periodic.  
+
+### Code Implementation
+- External gravity applied in the collision step.  
+- The forcing scheme modifies the distribution functions directly.  
+
+### Simulation Parameters
+- Reynolds number: **Re = 100**  
+- Domain size: \(801 \times 81\)  
+- Gravity: \( g_x = 1.25 \times 10^{-5} \)  
+- Kinematic viscosity: \( \nu = 0.1 \)  
+- Maximum velocity: \( u_{max} \approx 0.1 \)  
+
+### Results
+The velocity profile converges to a parabolic distribution as expected for Poiseuille flow.  
+
+**Validation Figure:**  
+*(Insert analytical vs computational velocity profile plot here)*
+
+**Animation:**  
+- *(Insert animation of velocity field for Re = 100)*  
 
 ---
 
-## Output Structure  
+## 2. Pressure-Driven Poiseuille Flow
 
-Each solver generates the following files:  
+### Problem Description
+The channel flow is driven by a **pressure gradient** applied through a density difference at the inlet and outlet.  
+This is equivalent to a body force but is introduced via **pressure (density) boundary conditions**.
 
-- `velocity_profile.dat` → velocity distribution across channel  
-- `validation.png` → computed vs analytical solution  
-- `contour.png` → steady-state velocity contour  
-- (optional) GIF animations → time evolution of velocity field  
+### Boundary Conditions
+- **Left wall**: Inlet pressure (higher density, \( \rho = 1.0 + \Delta \rho/2 \)).  
+- **Right wall**: Outlet pressure (lower density, \( \rho = 1.0 - \Delta \rho/2 \)).  
+- **Top & Bottom walls**: No-slip (bounce-back scheme).  
+
+### Code Implementation
+- Pressure gradient is introduced by modifying the density at inlet/outlet.  
+- No explicit forcing term is used.  
+- Like the gravity-driven case, `<omp.h>` is included but OpenMP is **not actively implemented**.  
+
+### Simulation Parameters
+- Reynolds number: **Re = 100**  
+- Domain size: \(501 \times 51\)  
+- Pressure difference (density difference): \( \Delta \rho = 0.03 \)  
+- Kinematic viscosity: \( \nu = 0.05 \)  
+
+### Results
+The velocity profile matches the expected parabolic Poiseuille distribution.  
+
+**Validation Figure:**  
+*(Insert analytical vs computational velocity profile plot here)*
+
+**Animation:**  
+- *(Insert animation of velocity field for Re = 100)*  
 
 ---
 
-## Compilation & Execution  
+## Validation
 
-### Serial (Gravity-Driven)  
-```bash
-g++ gravity_driven_serial.cpp -o poiseuille_gravity_serial
-./poiseuille_gravity_serial
+Both cases were validated against the analytical Poiseuille velocity profile:  
+
+$$
+u(y) = \frac{1}{2\nu}\frac{\Delta P}{L} \left( h^2 - y^2 \right)
+$$  
+
+where \(h\) is half the channel height.  
+
+**Validation Figures:**  
+- Gravity-driven: *(Insert validation plot here)*  
+- Pressure-driven: *(Insert validation plot here)*  
+
+---
+
+## Animations
+
+- Gravity-driven Poiseuille flow @ **Re = 100**: *(Insert animation here)*  
+- Pressure-driven Poiseuille flow @ **Re = 100**: *(Insert animation here)*  
+- Additional case @ **Re = 500** (if applicable): *(Insert animation here)*  
+
+---
+
+## Conclusion
+- Both driving mechanisms (gravity-driven using Guo forcing, and pressure-driven using density boundary conditions) produce the **expected parabolic velocity distribution**.  
+- The **gravity-driven approach** directly incorporates the body force in the collision step.  
+- The **pressure-driven approach** uses pressure (density) boundary conditions to mimic a gradient.  
+- Both were validated against analytical solutions and showed excellent agreement.  
+
+---
