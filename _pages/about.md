@@ -1,5 +1,5 @@
 ---
-permalink: /
+permalink: /aditya's-homepage/
 title: "Hey there! I am Aditya Jaiswal"
 author_profile: true
 redirect_from: 

@@ -1,5 +1,5 @@
 ---
-title: "Poiseuille Flow (Gravity & Pressure Driven) — LBM"
+title: "Poiseuille Flow (Gravity & Pressure Driven) LBM"
 layout: default
 method: lbm
 permalink: /projects/lbm/poiseuille-flow/
@@ -103,6 +103,26 @@ Shown below is the velocity profile and it converges to a parabolic distribution
   <figcaption>Gravity driven poiseuille flow created using the values obtained from our code.</figcaption>
 </figure>
 
+### Validation
+
+$$
+u(y) = \frac{\rho g}{2 \mu} \, y (H - y), \quad u_{\text{max}} = \frac{\rho g H^2}{8 \mu}
+$$
+
+$$
+\text{Where } \mu \text{ is the viscosity.}
+$$
+
+<div style="text-align: center; margin: 12px 0;">
+  <figure style="display: inline-block; max-width: 380px; margin: 0;">
+    <img src="/images/self_upload/lbm/validation_poisuelleGrav.png" 
+         alt="Comparison of computed and analytical solutions for gravity-driven flow." 
+         style="width: 100%; height: auto; border: 1px solid #ccc; border-radius: 3px;">
+    <figcaption style="font-size: 0.85em; margin-top: 4px; color: #555;">
+      Comparison of computed values with the analytical solution for <b>gravity-driven flow</b>.
+    </figcaption>
+  </figure>
+</div>
 ---
 
 ## 2. Pressure-Driven Poiseuille Flow
@@ -151,46 +171,15 @@ Shown below is the velocity profile and it converges to a parabolic distribution
   <figcaption>Pressure driven poiseuille flow created using the values obtained from our code.</figcaption>
 </figure>
 
----
+### Validation
 
-## Validation
-
-Both cases were validated against the analytical Poiseuille velocity profile (with the bottom wall as reference):  
-
----
-
-### Gravity-driven Flow
-
-\[
-u(y) = \frac{\rho g}{2 \mu} \, y (H - y), \quad u_{\text{max}} = \frac{\rho g H^2}{8 \mu}
-\]
-
-\[
-\text{Where } \mu \text{ is the viscosity.}
-\]
-
-<div style="text-align: center; margin: 12px 0;">
-  <figure style="display: inline-block; max-width: 380px; margin: 0;">
-    <img src="/images/self_upload/lbm/validation_poisuelleGrav.png" 
-         alt="Comparison of computed and analytical solutions for gravity-driven flow." 
-         style="width: 100%; height: auto; border: 1px solid #ccc; border-radius: 3px;">
-    <figcaption style="font-size: 0.85em; margin-top: 4px; color: #555;">
-      Comparison of computed values with the analytical solution for <b>gravity-driven flow</b>.
-    </figcaption>
-  </figure>
-</div>
-
----
-
-### Pressure-driven Flow
-
-\[
+$$
 u(y) = \frac{1}{2\mu} \frac{\Delta P}{L} \, y(H - y), \quad u_{\text{max}} = \frac{\Delta P H^2}{8 \mu L} 
-\]
+$$
 
-\[
+$$
 \text{Where } \mu \text{ is the viscosity}, \ L \text{ is the horizontal length, and } \Delta P \text{ is the pressure difference.}
-\]
+$$
 
 <div style="text-align: center; margin: 12px 0;">
   <figure style="display: inline-block; max-width: 380px; margin: 0;">
