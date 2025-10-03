@@ -1,21 +1,28 @@
 ---
 layout: archive
-title: Undergraduate Thesis
+title: "Undergraduate Thesis"
 permalink: /undergraduate-thesis/
 author_profile: true
-collections: undergraduate-thesis
 ---
 
-# Lid-Driven Cavity Solver (C++ with OpenMP)
+{% include base_path %}
 
-This project implements a **finite difference method (FDM)** solver for the **2D incompressible Navier–Stokes equations** in a **lid-driven cavity flow** configuration. The implementation follows the **streamfunction–vorticity formulation** of the governing equations, mentioned in [IIST, 2010](https://old.iist.ac.in/sites/default/files/people/psi-omega.pdf). The above mentioned PDF also talks about discretization of the equations as well as the schemes used.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, sapien nec interdum luctus, mauris arcu convallis lectus, et feugiat felis nibh in metus. Cras non sem eget sapien vehicula luctus. Nulla facilisi. 
 
-The code can be found [**here on GitHub**](https://github.com/AdityaJaiswal17/Finite_Difference_Methods/tree/main/Lid_Driven_Cavity).  
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus libero non nibh porta malesuada. Mauris tincidunt mattis diam, vitae viverra urna. Donec vel augue et justo laoreet gravida. 
 
-The solver is written in **C++** and provides both:  
-- a **serial implementation**, and  
-- a **parallel implementation** using **OpenMP**  
+Undergraduate Thesis
+======
 
-This allows performance comparison between the two approaches, while ensuring the correctness of the solution.  
+The following section will describe the research, methodology, and results from my undergraduate thesis work. 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique, orci nec gravida dictum, nisi est pulvinar leo, nec luctus nibh lorem sed justo. Curabitur egestas, mauris vel laoreet luctus, sapien odio condimentum leo, ut cursus nulla magna sed justo. 
+
+Results
+======
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.  
 
 ---
+
+*Last updated: {{ site.time | date: "%B %Y" }}*
