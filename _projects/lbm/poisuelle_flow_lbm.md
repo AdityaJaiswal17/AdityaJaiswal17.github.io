@@ -89,7 +89,7 @@ Shown below is the velocity profile and it converges to a parabolic distribution
     <img src="/images/self_upload/lbm/gravity_driven_U_profile.png" 
          alt="Velocity profile for gravity-driven Poiseuille flow." 
          style="width: 100%; height: auto; border: 1px solid #ccc; border-radius: 3px;">
-    <figcaption style="font-size: 0.8em; margin-top: 4px; color: #555;">
+    <figcaption>
       Velocity profile for <b>gravity-driven Poiseuille flow</b>.
     </figcaption>
   </figure>
@@ -118,7 +118,7 @@ $$
     <img src="/images/self_upload/lbm/validation_poisuelleGrav.png" 
          alt="Comparison of computed and analytical solutions for gravity-driven flow." 
          style="width: 100%; height: auto; border: 1px solid #ccc; border-radius: 3px;">
-    <figcaption style="font-size: 0.85em; margin-top: 4px; color: #555;">
+    <figcaption>
       Comparison of computed values with the analytical solution for <b>gravity-driven flow</b>.
     </figcaption>
   </figure>
@@ -157,7 +157,7 @@ Shown below is the velocity profile and it converges to a parabolic distribution
     <img src="/images/self_upload/lbm/pressure_driven_U_profile.png" 
          alt="Velocity profile for pressure-driven Poiseuille flow." 
          style="width: 100%; height: auto; border: 1px solid #ccc; border-radius: 3px;">
-    <figcaption style="font-size: 0.8em; margin-top: 4px; color: #555;">
+    <figcaption>
       Velocity profile for <b>pressure-driven Poiseuille flow</b>.
     </figcaption>
   </figure>
@@ -186,7 +186,7 @@ $$
     <img src="/images/self_upload/lbm/validation_poisuelleFlow.png" 
          alt="Comparison of computed and analytical solutions for pressure-driven flow." 
          style="width: 100%; height: auto; border: 1px solid #ccc; border-radius: 3px;">
-    <figcaption style="font-size: 0.85em; margin-top: 4px; color: #555;">
+    <figcaption>
       Comparison of computed values with the analytical solution for <b>pressure-driven flow</b>.
     </figcaption>
   </figure>
