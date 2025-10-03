@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: default
 title: "Undergraduate Thesis"
 permalink: /undergraduate-thesis/
 author_profile: false
