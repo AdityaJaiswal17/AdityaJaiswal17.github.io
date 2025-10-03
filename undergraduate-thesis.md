@@ -2,7 +2,7 @@
 layout: archive
 title: "Undergraduate Thesis"
 permalink: /undergraduate-thesis/
-# author_profile: true
+author_profile: false
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, sapien nec interdum luctus, mauris arcu convallis lectus, et feugiat felis nibh in metus. Cras non sem eget sapien vehicula luctus. Nulla facilisi. 
