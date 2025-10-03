@@ -1,8 +1,7 @@
 ---
-title: "Placeholder"
-layout: default
-permalink: /undergraduate_thesis/
-excerpt: "Placeholder"
+title: "undergraduate_thesis"
+# excerpt: "undergraduate_thesis"
+collection: undergraduate_thesis
 ---
 
 <div style="padding-top: 7px;"></div>
