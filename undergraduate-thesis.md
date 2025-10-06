@@ -149,7 +149,7 @@ Read metric-adapted `.vol` → enumerate candidate triangle pairs → compute as
 </div>
 
 
-In the above figures the **green triangle** is the current triangle. The vertices \[V_0, V_1, V_2\] are already defined as a set in the `.vol` mesh files. In the left figure, the blue triangles are the neighboring triangles and the side/edge opposite to each vertex is labelled as that numeric local edge (eg, The side opposite to the vertex \[V_0\] is labelled as 1 and so on.) In the right figure the blue triangle, that is the neighboring triangle has two sets of vertices common and the other vertex is the unique to the neighbor triangle and that is named as \[V^{4}_1\] which is the one straight opposite to the current green triangle's vertex \[V_1\].
+In the above figures the **green triangle** is the current triangle. The vertices \[V_0, V_1, V_2\] are already defined as a set in the `.vol` mesh files. In the left figure, the blue triangles are the neighboring triangles and the side/edge opposite to each vertex is labelled as that numeric local edge (eg, The side opposite to the vertex \[V_0\] is labelled as 1 and so on.) In the right figure the blue triangle, that is the neighboring triangle has two sets of vertices common and the other vertex is the unique to the neighbor triangle and that is named as $$V^{4}_1$$ which is the one straight opposite to the current green triangle's vertex \[V_1\].
 
 **Step 3 — Two quality metrics (local):**  
 - **Aspect ratio:** compute side lengths of the prospective quad and take `AR = max(side_i) / min(side_i)`.  
