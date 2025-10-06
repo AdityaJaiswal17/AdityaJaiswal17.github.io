@@ -114,10 +114,10 @@ Read metric-adapted `.vol` → enumerate candidate triangle pairs → compute as
 
 <figure style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 70%; margin: auto;">
   <img src="/images/self_upload/thesis/meshInput.png"
-       alt="Mesh input block."
+       alt="Mesh input block (snippet taken from the code)."
        style="width: 100%; height: auto; max-width: 400px; border-radius: 6px;">
   <figcaption style="text-align: center; font-style: italic; margin-top: 0.5em;">
-    Mesh input block.
+    Mesh input block (snippet taken from the code).
   </figcaption>
 </figure>
 
@@ -150,8 +150,8 @@ Read metric-adapted `.vol` → enumerate candidate triangle pairs → compute as
 In the above figures the **green triangle** is the current triangle. The vertices \[V_0, V_1, V_2\] are already defined as a set in the `.vol` mesh files. In the left figure, the blue triangles are the neighboring triangles and the side/edge opposite to each vertex is labelled as that numeric local edge (eg, The side opposite to the vertex \[V_0\] is labelled as 1 and so on.) In the right figure the blue triangle, that is the neighboring triangle has two sets of vertices common and the other vertex is the unique to the neighbor triangle and that is named as \[V^{4}_1\] which is the one straight opposite to the current green triangle's vertex \[V_1\].
 
 **Step 3 — Two quality metrics (local):**  
-- **Aspect ratio (AR):** compute side lengths of the prospective quad and take `AR = max(side_i) / min(side_i)`.  
-- **Angle quality (AngleQual):** compute four internal quad angles α_k and measure deviation from 90° (right angle). Convert deviation into a bounded quality metric in [0,1].
+- **Aspect ratio:** compute side lengths of the prospective quad and take `AR = max(side_i) / min(side_i)`.  
+- **Angle quality:** compute four internal quad angles α_k and measure deviation from 90° (right angle). Convert deviation into a bounded quality metric in [0,1]. \[\left(max\left(1-\frac{2}{\pi}\max_k\left|\tfrac{\pi}{2}-\alpha_k\right|\right), 0\right)\]
 
 <figure style="display: flex; flex-direction: column; align-items: center; width: 70%; margin: 2em auto;">
   <img src="/images/self_upload/thesis/AR_algoFlowchart.png" 
@@ -168,12 +168,12 @@ In the above figures the **green triangle** is the current triangle. The vertice
 - Combine:
 
 \\[
-q = \omega \cdot \frac{\text{AR}_{\text{local}}}{\max(\text{AR})} \;+\; (1-\omega)\left(1-\frac{2}{\pi}\max_k\left|\tfrac{\pi}{2}-\alpha_k\right|\right)
+q = \omega \cdot \frac{\text{AR}_{\text{local}}}{\max(\text{AR})} \;+\; (1-\omega)\left(max\left(1-\frac{2}{\pi}\max_k\left|\tfrac{\pi}{2}-\alpha_k\right|\right), 0\right)
 \\]
 
 **Step 5 — Collect & sort:**  
-- Collect all candidate pairs into an `elm_info` array with fields (element_id, neighbor_id, edge_index, q, active_flag).  
-- Sort descending by `q`.
+- Collect all candidate pairs into an `elm_info` array.  
+- Sort descending by quality values.
 
 **Step 6 — Greedy recombination:**  
 - Iterate sorted list; whenever a candidate's two triangles are still active, accept the pairing, mark both triangles inactive (so they are not reused), and create a quad element record.
@@ -183,26 +183,24 @@ q = \omega \cdot \frac{\text{AR}_{\text{local}}}{\max(\text{AR})} \;+\; (1-\omeg
 
 **Step 8 — Smoothing:**  
 - Optional Laplacian smoothing move averages of non-boundary vertices across their neighbors for `n` iterations to improve cell shapes.
+- Using **laplacian smoothing** for the vertex smoothing. It computes the average nodal value of the connected neighboring nodes. For details and more, refer [**here**](https://www.andrew.cmu.edu/user/shimada/papers/00-imr-zhou.pdf)
 
 **Step 9 — Output:**  
 - Write recombined `.vol` files (one per experimental configuration) and optional PNG/SVG visualizations.
 
 ---
 
-## 4 — Flowchart (visual algorithm)
-**Preferred:** replace this with **Figure 4.4 (Flowchart)** from the thesis PDF (crop/upload to `flowchart_fig4_4.png` or `flowchart.svg`).  
-**Otherwise**, the Mermaid block below is a readable text diagram (works if your site renders Mermaid).
+## 4 — Algorithm flowchart
 
-```mermaid
-flowchart TD
-  A[Input: metric-adapted .vol] --> B[Neighbor discovery]
-  B --> C[Compute AR + Angle Quality]
-  C --> D[Normalize & combine: q = ω*ARnorm + (1-ω)*AngleQual]
-  D --> E[Collect & Sort candidates by q]
-  E --> F[Greedy recombination (mark used triangles OFF)]
-  F --> G[Optional: Laplacian smoothing]
-  G --> H[Write recombined .vol and stats/images]
-```
+
+<figure style="display: flex; flex-direction: column; align-items: center; width: 70%; margin: 2em auto;">
+  <img src="/images/self_upload/thesis/program_flowchart.png" 
+       alt="Program's algorithm and an overview."
+       style="width: 100%; height: auto; max-width: 450px; border-radius: 6px;">
+  <figcaption style="text-align: center; font-style: italic; margin-top: 0.5em;">
+    Program's algorithm and an overview.
+  </figcaption>
+</figure>
 
 ## 5 — Results
 
@@ -221,7 +219,7 @@ flowchart TD
 
 ### 5.2 Visual results and commentary
 
-From the Figures 5.1–5.4 and 5.11–5.12 (placeholders above). Observe:
+From the Figures in section 2 under <i> work highlights <i>. Observe:
 
 - Boundary-layer regions re-meshed with quad rows aligned tangentially.
 
@@ -239,11 +237,9 @@ From the Figures 5.1–5.4 and 5.11–5.12 (placeholders above). Observe:
 
 - The serial greedy algorithm scales linearly in the number of candidate pairs up to sorting cost (dominant O(N log N) for sorting).
 
-- The MPI variant parallelizes candidate evaluation and can improve wall-clock time for large meshes.
-
 ## 6 — Code & function map (where to look in recombination.py)
 
-- I/O / mesh read: Mesh(meshFile) via NGSolve/Netgen reader (loads vertices, elements).
+- I/O / mesh read: meshFile = "mesh.vol" and Mesh(meshFile) via NGSolve/Netgen reader (loads vertices, elements).
 
 - Neighbor detection: neighbors_elm(el_num), neighbors_vert(el_num).
 
@@ -256,8 +252,6 @@ From the Figures 5.1–5.4 and 5.11–5.12 (placeholders above). Observe:
 - Boundary marking: is_boundary(...), boundary_weights(...).
 
 - Smoothing: laplacian_smoothing(...).
-
-- MPI variant: if mpi_enabled: ...
 
 ## 7 — Prerequisites & installation
 
@@ -278,6 +272,8 @@ python3 recombination.py
 ## 9 — Future work & extensions
 
 - Use local search to improve global quad quality.
+
+- Use angle based smoothing as it is more robust and accounts in various factors such as crossing over of the vertices as well.
 
 - Metric-respecting smoothing.
 
