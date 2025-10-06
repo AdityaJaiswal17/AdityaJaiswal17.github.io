@@ -31,3 +31,25 @@ layout: compress
 
   </body>
 </html>
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true,
+      tags: 'none'
+    },
+    chtml: {
+      scale: 1,         // base scale = 100%
+      minScale: 0.75,   // prevent shrinking too small on phones
+      matchFontHeight: true
+    },
+    options: {
+      renderActions: {
+        addMenu: [0, '', ''] // disables the right-click MathJax menu (optional)
+      }
+    }
+  };
+</script>
+<script async id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
