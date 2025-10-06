@@ -155,7 +155,9 @@ In the above figures the **green triangle** is the current triangle. The vertice
 
 - **Aspect ratio:**  
   Compute side lengths of the prospective quadrilateral and define  
-  \\( AR = \dfrac{\max(\text{side}_i)}{\min(\text{side}_i)} \\).  
+  \\[
+  AR = \dfrac{\max(\text{side}_i)}{\min(\text{side}_i)} 
+  \\].  
 
 - **Angle quality:**  
   Compute the four internal quad angles \\( \alpha_k \\) and measure their deviation  
