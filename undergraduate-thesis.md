@@ -28,7 +28,7 @@ This page summarizes the method, shows visual and numerical results, details how
 
 ---
 
-## 2 — Work highlights
+## 2 — Work highlights (The left figures show the initial mesh and the right figures show the final mesh obtained using our recombination program)
 
 <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
 
@@ -151,7 +151,7 @@ In the above figures the **green triangle** is the current triangle. The vertice
 
 **Step 3 — Two quality metrics (local):**  
 - **Aspect ratio:** compute side lengths of the prospective quad and take `AR = max(side_i) / min(side_i)`.  
-- **Angle quality:** compute four internal quad angles α_k and measure deviation from 90° (right angle). Convert deviation into a bounded quality metric in [0,1]. \[\left(max\left(1-\frac{2}{\pi}\max_k\left|\tfrac{\pi}{2}-\alpha_k\right|\right), 0\right)\]
+- **Angle quality:** compute four internal quad angles α_k and measure deviation from 90° (right angle). Convert deviation into a bounded quality metric in [0,1]. \\[\left(max\left(1-\frac{2}{\pi}\max_k\left|\tfrac{\pi}{2}-\alpha_k\right|\right), 0\right)\\]
 
 <figure style="display: flex; flex-direction: column; align-items: center; width: 70%; margin: 2em auto;">
   <img src="/images/self_upload/thesis/AR_algoFlowchart.png" 
