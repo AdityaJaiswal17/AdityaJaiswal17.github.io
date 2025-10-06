@@ -162,7 +162,7 @@ In the above figures the **green triangle** is the current triangle. The vertice
   from 90° (right angle). The deviation is converted into a bounded quality metric within [0, 1]:  
 
   \\[
-  Q = \max\!\left(1 - \frac{2}{\pi}\max_k\!\left|\tfrac{\pi}{2}-\alpha_k\right|,\, 0\right)
+  Q = \max\left(1 - \frac{2}{\pi}\max_k\left|\tfrac{\pi}{2}-\alpha_k\right|,\, 0\right)
   \\]
 
 ---
