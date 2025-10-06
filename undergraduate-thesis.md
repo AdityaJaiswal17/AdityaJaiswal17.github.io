@@ -13,7 +13,8 @@ author_profile: false
 
 **Short description:** Algorithm that convert metric-adapted triangular meshes into quad-dominant meshes by scoring candidate triangle pairs with a combined aspect-ratio + angle-quality metric, recombining them greedily, and optionally smoothing. This work was done as a part of my Undergraduate Thesis for BITS Pilani at Indian Institute of Science [IISc].
 The entire code repository can be found — [**here**](https://github.com/AdityaJaiswal17/BITS_Pilani-Undergraduate-Thesis). This code repo also has some `.vol` mesh files which can be used as example test cases.
-Moreover, The thesis PDF can be found — [**here**](/files/Aditya_Jaiswal_Thesis.pdf) 
+
+Moreover, the thesis PDF can be found — [**here**](/files/Aditya_Jaiswal_Thesis.pdf) 
 
 ---
 
@@ -57,8 +58,8 @@ This page summarizes the method, shows visual and numerical results, details how
     </div>
 
     <div>
-      <img src="/images/self_upload/thesis/airfoil_tri_zoomedOut.png" alt="Diamond airfoil (zoomed in): initial tri mesh" style="width: 80%; margin: auto;">
-      <p><em>Diamond airfoil (zoomed in): initial tri mesh</em></p>
+      <img src="/images/self_upload/thesis/airfoil_recombined.png" alt="Diamond airfoil (zoomed out): recombined quad mesh" style="width: 80%; margin: auto;">
+      <p><em>Diamond airfoil (zoomed out): recombined quad mesh</em></p>
     </div>
 
   </div>
@@ -67,8 +68,8 @@ This page summarizes the method, shows visual and numerical results, details how
   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 80%; text-align: center;">
 
     <div>
-      <img src="/images/self_upload/thesis/airfoil_recombined.png" alt="Diamond airfoil (zoomed out): recombined quad mesh" style="width: 80%; margin: auto;">
-      <p><em>Diamond airfoil (zoomed out): recombined quad mesh</em></p>
+      <img src="/images/self_upload/thesis/airfoil_tri_zoomedOut.png" alt="Diamond airfoil (zoomed in): initial tri mesh" style="width: 80%; margin: auto;">
+      <p><em>Diamond airfoil (zoomed in): initial tri mesh</em></p>
     </div>
 
     <div>
@@ -79,29 +80,74 @@ This page summarizes the method, shows visual and numerical results, details how
   </div>
 
   <hr style="border: none; border-top: 2px dashed #999; width: 70%; margin: 2em 0;">
-  
+
+  <!-- Row 4 -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 80%; text-align: center;">
+
+    <div>
+      <img src="/images/self_upload/thesis/config1_tri.png" alt="Configuration 1: initial tri mesh" style="width: 80%; margin: auto;">
+      <p><em>Configuration 1: initial tri mesh</em></p>
+    </div>
+
+    <div>
+      <img src="/images/self_upload/thesis/config1_recombined.png" alt="Configuration 1: recombined quad mesh" style="width: 80%; margin: auto;">
+      <p><em>Configuration 1: recombined quad mesh</em></p>
+    </div>
+
+  </div>
+
 </div>
 
 
 ---
 
 ## 3 — Algorithm pipeline (step-by-step)
-Below is the exact pipeline the code implements. This is written to be both human-readable and reproducible.
+Below is the exact pipeline the code implements.
 
 ### 3.1 One-line pipeline
-Read metric-adapted `.vol` → enumerate candidate triangle pairs → compute aspect-ratio & angle quality → combine with weight ω → sort candidates → greedy recombination → optional Laplacian smoothing → write new `.vol`.
+Read metric-adapted `.vol` → enumerate candidate triangle pairs → compute aspect-ratio & angle quality → combine with weight ω → sort candidates → greedy recombination → optional Laplacian smoothing → write new recombined `.vol`.
 
-### 3.2 Detailed steps
+### 3.2 Detailed steps (screenshots taken from [**recombination.py**](https://github.com/AdityaJaiswal17/BITS_Pilani-Undergraduate-Thesis/blob/main/recombination.py) in the Github repo)
 
 **Step 1 — Input:**  
-- The tool expects a Netgen / NGSolve `.vol` file containing a triangular mesh adapted in metric space.
+- The algorithm expects a Netgen / NGSolve `.vol` file containing a triangular mesh adapted in metric space.
+
+<figure style="flex: 1; text-align: center;">
+  <img src="/images/self_upload/thesis/meshInput.png" alt="Mesh input block.">
+  <figcaption>Mesh input block.</figcaption>
+</figure>
 
 **Step 2 — Neighbor discovery:**  
 - For each triangle, identify up to three neighboring triangles sharing an edge (opposite vertices). Implemented with `neighbors_elm` and `neighbors_vert` in the code.
 
+<div style="display: flex; justify-content: space-around; gap: 20px;">
+
+  <figure style="flex: 1; text-align: center;">
+    <img src="/images/self_upload/thesis/notations.jpg" 
+         alt="Triangle notation for identifying vertex and edges." 
+         style="max-width:100%; height:auto;">
+    <figcaption>Triangle notation for identifying vertex and edges.</figcaption>
+  </figure>
+
+  <figure style="flex: 1; text-align: center;">
+    <img src="/images/self_upload/thesis/opp_neighbor_notation.jpg" 
+         alt="Notations for identifying neighboring triangle." 
+         style="max-width:100%; height:auto;">
+    <figcaption>Notations for identifying neighboring triangle.</figcaption>
+  </figure>
+
+</div>
+
+In the above figures the **green triangle** is the current triangle. The vertices \[V_0, V_1, V_2\] are already defined as a set in the `.vol` mesh files. In the left figure, the blue triangles are the neighboring triangles and the side/edge opposite to each vertex is labelled as that numeric local edge (eg, The side opposite to the vertex \[V_0\] is labelled as 1 and so on.) In the right figure the blue triangle, that is the neighboring triangle has two sets of vertices common and the other vertex is the unique to the neighbor triangle and that is named as \[V^{4}_1\] which is the one straight opposite to the current green triangle's vertex \[V_1\].
+
 **Step 3 — Two quality metrics (local):**  
 - **Aspect ratio (AR):** compute side lengths of the prospective quad and take `AR = max(side_i) / min(side_i)`.  
 - **Angle quality (AngleQual):** compute four internal quad angles α_k and measure deviation from 90° (right angle). Convert deviation into a bounded quality metric in [0,1].
+
+<figure style="flex: 1; text-align: center;">
+  <img src="/images/self_upload/thesis/AR_algoFlowchart.png" alt="Algorithm to compute aspect ratios.">
+  <figcaption>Algorithm to compute aspect ratios.</figcaption>
+</figure>
 
 **Step 4 — Normalization and linear combination:**  
 - Normalize AR by the global maximum AR in the mesh (so AR ∈ [0,1] after normalization).  
