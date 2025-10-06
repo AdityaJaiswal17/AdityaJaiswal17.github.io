@@ -17,12 +17,11 @@ main:
       - title: "Lattice Boltzmann Method"
         url: "/projects/lbm/"
 
-  - title: "CV"
-    url: /files/Aditya_Jaiswal_BITS_CV.pdf
-
   - title: "Undergraduate Thesis"
     url: /undergraduate-thesis/
 
+  - title: "CV"
+    url: /files/Aditya_Jaiswal_BITS_CV.pdf
 
   # - title: "Publications"
   #   url: /publications/
