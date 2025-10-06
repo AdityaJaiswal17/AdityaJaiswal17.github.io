@@ -112,31 +112,40 @@ Read metric-adapted `.vol` → enumerate candidate triangle pairs → compute as
 **Step 1 — Input:**  
 - The algorithm expects a Netgen / NGSolve `.vol` file containing a triangular mesh adapted in metric space.
 
-<figure style="flex: 1; text-align: center;">
-  <img src="/images/self_upload/thesis/meshInput.png" alt="Mesh input block.">
-  <figcaption>Mesh input block.</figcaption>
+<figure style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 70%; margin: auto;">
+  <img src="/images/self_upload/thesis/meshInput.png"
+       alt="Mesh input block."
+       style="width: 100%; height: auto; max-width: 400px; border-radius: 6px;">
+  <figcaption style="text-align: center; font-style: italic; margin-top: 0.5em;">
+    Mesh input block.
+  </figcaption>
 </figure>
 
 **Step 2 — Neighbor discovery:**  
 - For each triangle, identify up to three neighboring triangles sharing an edge (opposite vertices). Implemented with `neighbors_elm` and `neighbors_vert` in the code.
 
-<div style="display: flex; justify-content: space-around; gap: 20px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; margin: 1.5em 0;">
 
-  <figure style="flex: 1; text-align: center;">
+  <figure style="flex: 1 1 400px; max-width: 45%; text-align: center; margin: 0;">
     <img src="/images/self_upload/thesis/notations.jpg" 
-         alt="Triangle notation for identifying vertex and edges." 
-         style="max-width:100%; height:auto;">
-    <figcaption>Triangle notation for identifying vertex and edges.</figcaption>
+         alt="Triangle notation for identifying vertex and edges."
+         style="width: 100%; height: auto; border-radius: 6px;">
+    <figcaption style="text-align: center; font-style: italic; margin-top: 0.5em;">
+      Triangle notation for identifying vertex and edges.
+    </figcaption>
   </figure>
 
-  <figure style="flex: 1; text-align: center;">
+  <figure style="flex: 1 1 400px; max-width: 45%; text-align: center; margin: 0;">
     <img src="/images/self_upload/thesis/opp_neighbor_notation.jpg" 
-         alt="Notations for identifying neighboring triangle." 
-         style="max-width:100%; height:auto;">
-    <figcaption>Notations for identifying neighboring triangle.</figcaption>
+         alt="Notations for identifying neighboring triangle."
+         style="width: 100%; height: auto; border-radius: 6px;">
+    <figcaption style="text-align: center; font-style: italic; margin-top: 0.5em;">
+      Notations for identifying neighboring triangle.
+    </figcaption>
   </figure>
 
 </div>
+
 
 In the above figures the **green triangle** is the current triangle. The vertices \[V_0, V_1, V_2\] are already defined as a set in the `.vol` mesh files. In the left figure, the blue triangles are the neighboring triangles and the side/edge opposite to each vertex is labelled as that numeric local edge (eg, The side opposite to the vertex \[V_0\] is labelled as 1 and so on.) In the right figure the blue triangle, that is the neighboring triangle has two sets of vertices common and the other vertex is the unique to the neighbor triangle and that is named as \[V^{4}_1\] which is the one straight opposite to the current green triangle's vertex \[V_1\].
 
@@ -144,10 +153,15 @@ In the above figures the **green triangle** is the current triangle. The vertice
 - **Aspect ratio (AR):** compute side lengths of the prospective quad and take `AR = max(side_i) / min(side_i)`.  
 - **Angle quality (AngleQual):** compute four internal quad angles α_k and measure deviation from 90° (right angle). Convert deviation into a bounded quality metric in [0,1].
 
-<figure style="flex: 1; text-align: center;">
-  <img src="/images/self_upload/thesis/AR_algoFlowchart.png" alt="Algorithm to compute aspect ratios.">
-  <figcaption>Algorithm to compute aspect ratios.</figcaption>
+<figure style="display: flex; flex-direction: column; align-items: center; width: 70%; margin: 2em auto;">
+  <img src="/images/self_upload/thesis/AR_algoFlowchart.png" 
+       alt="Algorithm to compute aspect ratios."
+       style="width: 100%; height: auto; max-width: 450px; border-radius: 6px;">
+  <figcaption style="text-align: center; font-style: italic; margin-top: 0.5em;">
+    Algorithm to compute aspect ratios.
+  </figcaption>
 </figure>
+
 
 **Step 4 — Normalization and linear combination:**  
 - Normalize AR by the global maximum AR in the mesh (so AR ∈ [0,1] after normalization).  
