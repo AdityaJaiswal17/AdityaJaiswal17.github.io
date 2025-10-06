@@ -63,8 +63,6 @@ This page summarizes the method, shows visual and numerical results, details how
 
   </div>
 
-  <hr style="border: none; border-top: 2px dashed #999; width: 70%; margin: 2em 0;">
-
   <!-- Row 3 -->
   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 80%; text-align: center;">
 
@@ -80,6 +78,8 @@ This page summarizes the method, shows visual and numerical results, details how
 
   </div>
 
+  <hr style="border: none; border-top: 2px dashed #999; width: 70%; margin: 2em 0;">
+  
 </div>
 
 
