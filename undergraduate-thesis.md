@@ -33,34 +33,34 @@ This page summarizes the method, shows visual and numerical results, details how
 
 <div>
 
-<img src="/images/self_upload/thesis/cross_tri.png" alt="Cross initial mesh" width="100%">
+<img src="/images/self_upload/thesis/cross_tri.png" alt="Quarter circle: initial tri mesh" width="70%">
 <p align="center"><em>Quarter circle: initial tri mesh </em></p>
 </div>
 
 <div>
-<img src="/images/self_upload/thesis/cross_recombined.png" alt="Cross recombined mesh" width="100%">
+<img src="/images/self_upload/thesis/cross_recombined.png" alt="Quarter circle: recombined quad mesh" width="70%">
 <p align="center"><em>Quarter circle: recombined quad mesh</em></p>
 </div>
 
 <hr style="border: none; border-top: 2px dashed #999; margin: 1.5em 0;">
 
 <div>
-<img src="/images/self_upload/thesis/airofil_tri.png" alt="Circular initial mesh" width="100%">
+<img src="/images/self_upload/thesis/airofil_tri.png" alt="Diamond airofil (zoomed out): initial tri mesh" width="70%">
 <p align="center"><em>Diamond airofil (zoomed out): initial tri mesh</em></p>
 </div>
 
 <div>
-<img src="/images/self_upload/thesis/airfoil_tri_zoomedOut.png" alt="Circular recombined mesh" width="100%">
+<img src="/images/self_upload/thesis/airfoil_tri_zoomedOut.png" alt="Diamond airofil (zoomed in): initial tri mesh" width="70%">
 <p align="center"><em>Diamond airofil (zoomed in): initial tri mesh</em></p>
 </div>
 
 <div>
-<img src="/images/self_upload/thesis/airfoil_recombined.png" alt="Diamond airfoil initial mesh" width="100%">
+<img src="/images/self_upload/thesis/airfoil_recombined.png" alt="Diamond airfoil initial mesh" width="70%">
 <p align="center"><em>Diamond airfoil (zoomed out): recombined quad mesh</em></p>
 </div>
 
 <div>
-<img src="/images/self_upload/thesis/airfoil_recombined_zoomed.png" alt="Diamond airfoil recombined mesh" width="100%">
+<img src="/images/self_upload/thesis/airfoil_recombined_zoomed.png" alt=">Diamond airfoil (zoomed in): recombined quad mesh" width="70%">
 <p align="center"><em>Diamond airfoil (zoomed in): recombined quad mesh</em></p>
 </div>
 
