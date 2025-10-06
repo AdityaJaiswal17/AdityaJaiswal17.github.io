@@ -7,10 +7,13 @@ author_profile: false
 
 {% include base_path %}
 
+<div style="padding-top: 7px;"></div>
+
 # Optimal Recombination Algorithms for Generating Quad-Dominant Meshes
 
-**Author:** Aditya Jaiswal — Undergraduate Thesis (Dec 2024)  
-**Short description:** Algorithms that convert metric-adapted triangular meshes into quad-dominant meshes by scoring candidate triangle pairs with a combined aspect-ratio + angle-quality metric, recombining them greedily, and optionally smoothing and parallelizing the process.
+**Short description:** Algorithm that convert metric-adapted triangular meshes into quad-dominant meshes by scoring candidate triangle pairs with a combined aspect-ratio + angle-quality metric, recombining them greedily, and optionally smoothing. This work was done as a part of my Undergraduate Thesis for BITS Pilani at Indian Institute of Science [IISc].
+The entire code repository can be found — [**here**](https://github.com/AdityaJaiswal17/BITS_Pilani-Undergraduate-Thesis). This code repo also has some `.vol` mesh files which can be used as example test cases.
+Moreover, The thesis PDF can be found — [**here**](/files/Aditya_Jaiswal_Thesis.pdf) 
 
 ---
 
@@ -24,41 +27,44 @@ This page summarizes the method, shows visual and numerical results, details how
 
 ---
 
-## 2 — Visual highlights (placeholders — drop images into repo)
-
-> Crop/replace the following placeholders with the exported figures from the PDF. Suggested filenames are exactly those below so the page updates automatically once you upload them.
+## 2 — Work highlights
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
 
 <div>
-<img src="quarter_initial.png" alt="Quarter circle initial mesh" width="100%">
-<p align="center"><em>Figure 5.1 — Quarter circle: initial triangular mesh (placeholder `quarter_initial.png`)</em></p>
+
+<img src="/images/self_upload/thesis/cross_tri.png" alt="Cross initial mesh" width="100%">
+<p align="center"><em>Quarter circle: initial tri mesh </em></p>
 </div>
 
 <div>
-<img src="quarter_recombined.png" alt="Quarter circle recombined mesh" width="100%">
-<p align="center"><em>Figure 5.2 — Quarter circle: recombined quad mesh (placeholder `quarter_recombined.png`)</em></p>
+<img src="/images/self_upload/thesis/cross_recombined.png" alt="Cross recombined mesh" width="100%">
+<p align="center"><em>Quarter circle: recombined quad mesh</em></p>
+</div>
+
+<hr style="border: none; border-top: 2px dashed #999; margin: 1.5em 0;">
+
+<div>
+<img src="/images/self_upload/thesis/airofil_tri.png" alt="Circular initial mesh" width="100%">
+<p align="center"><em>Diamond airofil (zoomed out): initial tri mesh</em></p>
 </div>
 
 <div>
-<img src="circular_initial.png" alt="Circular initial mesh" width="100%">
-<p align="center"><em>Figure 5.3 — Circular: initial mesh (placeholder `circular_initial.png`)</em></p>
+<img src="/images/self_upload/thesis/airfoil_tri_zoomedOut.png" alt="Circular recombined mesh" width="100%">
+<p align="center"><em>Diamond airofil (zoomed in): initial tri mesh</em></p>
 </div>
 
 <div>
-<img src="circular_recombined.png" alt="Circular recombined mesh" width="100%">
-<p align="center"><em>Figure 5.4 — Circular: recombined mesh (placeholder `circular_recombined.png`)</em></p>
+<img src="/images/self_upload/thesis/airfoil_recombined.png" alt="Diamond airfoil initial mesh" width="100%">
+<p align="center"><em>Diamond airfoil (zoomed out): recombined quad mesh</em></p>
 </div>
 
 <div>
-<img src="diamond_initial.png" alt="Diamond airfoil initial mesh" width="100%">
-<p align="center"><em>Figure 5.11 — Diamond airfoil: initial mesh (placeholder `diamond_initial.png`)</em></p>
+<img src="/images/self_upload/thesis/airfoil_recombined_zoomed.png" alt="Diamond airfoil recombined mesh" width="100%">
+<p align="center"><em>Diamond airfoil (zoomed in): recombined quad mesh</em></p>
 </div>
 
-<div>
-<img src="diamond_recombined.png" alt="Diamond airfoil recombined mesh" width="100%">
-<p align="center"><em>Figure 5.12 — Diamond airfoil: recombined mesh (placeholder `diamond_recombined.png`)</em></p>
-</div>
+<hr style="border: none; border-top: 2px dashed #999; margin: 1.5em 0;">
 
 </div>
 
