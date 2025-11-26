@@ -9,6 +9,37 @@ redirect_from:
 
 I am Aditya Jaiswal, a graduate in Mechanical Engineering from the prestigious [**Birla Institute of Technology and Science (BITS) Pilani, Pilani campus**](https://www.bits-pilani.ac.in/pilani/mechanical-engineering/). My academic interests lie at the intersection of applied mathematics, numerical methods, and high-performance computing, with a particular focus on computational fluid dynamics and scientific simulation.
 
+<figure style="margin: 20px 0; text-align: center;">
+  <div style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; flex-wrap: wrap;">
+    
+    <div style="flex: 1; min-width: 250px; text-align: center;">
+      <img src="/images/self_upload/Phase_field_ST_0.0001.png" 
+           alt="Phase field contours for a bubble suspended in a symmetrical system." 
+           style="width: 100%; height: auto; border-radius: 6px;">
+      <figcaption style="font-size: 0.9em; margin-top: 5px;">
+        Phase field contours for a bubble suspended in a symmetrical system.
+      </figcaption>
+    </div>
+
+    <div style="flex: 1; min-width: 250px; text-align: center;">
+      <img src="/images/self_upload/ST_0.0001.png" 
+           alt="Spurious currents induced due to the errors in surface tension forcing scheme." 
+           style="width: 100%; height: auto; border-radius: 6px;">
+      <figcaption style="font-size: 0.9em; margin-top: 5px;">
+        Spurious currents induced due to the errors in surface tension forcing scheme. The spurious currents are the circular velocity fields above.
+      </figcaption>
+    </div>
+
+  </div>
+
+  <!-- Distinct common centered caption -->
+  <figcaption style="margin-top: 12px; font-style: italic; font-size: 0.95em; color: #555;">
+    Part of work done as a research Intern at Indian Institute of Bombay (IITB). The above work was also presented at [**CompFlu 2023**](https://ge.iitm.ac.in/compflu-2023/wp-content/uploads/2023/12/Abstract%20booklet%20COMPFLU%20v10.pdf#page=355) and the publication manuscript is under preparation. 
+  </figcaption>
+</figure>
+
+
+
 About my interests & Academic/Industrial experiences 
 ------
 
